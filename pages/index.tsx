@@ -17,6 +17,7 @@ export default function Index({ allPosts }: Props): JSX.Element {
       <main>
         {allPosts.map((heroPost) => (
           <HeroPost
+            key={heroPost.title}
             title={heroPost.title}
             coverImage={heroPost.coverImage}
             date={heroPost.date}
