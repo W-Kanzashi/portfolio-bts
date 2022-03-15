@@ -3,7 +3,6 @@ import ErrorPage from "next/error";
 import PostBody from "@components/Markdown/PostBody";
 import Header from "@components/Header";
 import PostHeader from "@components/Markdown/PostHeader";
-import Layout from "@components/Layout";
 import { getPostBySlug, getAllPosts } from "lib/api";
 import PostTitle from "@components/Markdown/PostTitle";
 import Head from "next/head";
@@ -17,25 +16,24 @@ type Props = {
   preview?: boolean;
 };
 
-const Post = ({ post, morePosts, preview }: Props) => {
+const Post = ({ post }: Props) => {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <main className="container mx-auto px-5">
-      <Header />
+    <main className="container mx-auto rounded-2xl bg-watusi-600/80 px-5 pt-20 shadow-2xl shadow-watusi-500">
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (
         <>
-          <article className="mb-32">
-            <Head>
-              <title>
-                {post.title} | Next.js Blog Example with {CMS_NAME}
-              </title>
-              <meta property="og:image" content={post.ogImage.url} />
-            </Head>
+          <Head>
+            <title>
+              {post.title} | Next.js Blog Example with {CMS_NAME}
+            </title>
+            <meta property="og:image" content={post.ogImage.url} />
+          </Head>
+          <article className="mb-32 py-10 px-2">
             <PostHeader
               title={post.title}
               coverImage={post.coverImage}

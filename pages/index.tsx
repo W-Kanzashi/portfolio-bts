@@ -14,7 +14,7 @@ export default function Index({ allPosts }: Props): JSX.Element {
       <Header />
 
       {/* Markdown parser display */}
-      <section>
+      <main>
         {allPosts.map((heroPost) => (
           <HeroPost
             title={heroPost.title}
@@ -25,7 +25,7 @@ export default function Index({ allPosts }: Props): JSX.Element {
             excerpt={heroPost.excerpt}
           />
         ))}
-      </section>
+      </main>
     </div>
   );
 }
