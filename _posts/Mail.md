@@ -14,21 +14,27 @@ ogImage:
 
 # Le besoin
 
-La communication entre l'entreprise, ses partenaires et ses clients est un enjeu essentiel pour facilité les échanges, la gestion des ressources, des rendez-vous, etc....
+La communication entre l'entreprise, ses partenaires et ses clients est un enjeu essentiel pour faciliter les échanges, la gestion des ressources, des rendez-vous, etc....
 
-Il est donc nécessaire de les réaliser le plus rapidement possible. Pour ce faire le choix des email est la solution la plus adaptée.
+Il est donc nécessaire de les réaliser le plus rapidement possible. Pour ce faire le choix des emails est la solution la plus adaptée.
 
-La plus part des entreprises individuelles utilisent des boîtes mails personnelles pour communiquer avec leurs clients.
+La plupart des entreprises individuelles utilisent des boîtes mails personnelles pour communiquer avec leurs clients. Mais grâce à une demande de plus en plus importante et une diversification de l’entreprise dans des domaines autre que la serrurerie, il a fallu revoir l’utilisation d’une boite mail personnelle et utiliser une boite mail professionnelle.
+
+## Les avantages de la boite mail professionnelle
+
+- Création d’un nombre illimité d’alias en fonction du besoin
+- Administration plus complète des droits en fonction des utilisateurs
+- Utilisation du domaine de l’entreprise
+- Attribution de règles d’envoie et de réception d’email
+- Statistiques
 
 # La mise en place
 
-Pour mettre en place la messagerie il faut :
+## Faire le choix de la boite mail
 
-## Définir quel est le besoin de l'entreprise
+Nous pouvions faire le choix d’un service que nous hébergeons nous même sur nos serveur (self-hosting) ou l’utilisation de services en ligne (SAAS).
 
-Notre besoin été simple, avoir un fonctionnement proche du 24/7 et une utilisation simple pour une personne ne sachant pas utiliser une boite mail. Un prix très proche de 0 euros.
-
-## Choisir une solution qui permet de répondre à ces besoins
+Le choix de la boite mail à été principalement faite en fonction du prix de celle-ci et du travail nécessaire pour la mettre en place. Comme indiquer dans l’introduction le besoin global est la réduction des coûts de production et l’augmentation de la productivité.
 
 Plusieurs choix sont possibles :
 
@@ -36,16 +42,26 @@ Plusieurs choix sont possibles :
 - Outlook
 - Services de messagerie privée
 
-Notre choix c'est porté sur le service Outlook car notre service de mise à disposition de serveur de page internet nous le proposais à prix très réduit.
+Notre choix c’est porté sur le service Outlook pro qui été proposé en même temps que notre service d’hébergement de site internet et disponible gratuitement pendant 1 an.
 
-## Mettre en place la boite mail
+## Mise en place
 
-La mise en place est très simple. Il faut créer un compte administrateur avec un email et un mot de passe et lui assigner les droits d'administration.
+La mise en place est très simple, il suffit de choisir le service Outlook et d’ajouter un utilisateur qui servira d’administrateur.
 
-## Ajouter et configurer les utilisateurs et les alias en fonction de la demande
+Ensuite il faut ajouter les autres utilisateurs et leurs assignés des droits (lecture, écriture, réception, émission d’email, etc…).
 
-Il faut ajouter les autre utilisateurs avec leurs droits et enfin ajouter des alias qui correspondra aux différentes section de l'entreprise (contact, compta, donnee, etc...).
+Pour finir la création d’alias en fonction de la section et du domaine de l’entreprise :
 
-# Lorem Ipsum
+- Contact : Toute informations concernant l’entreprises (demande d’information sur un travail, demande de devis, etc…
+- Compta : Envoie et réception de document se rapportant à la comptabilité de l’entreprise
+- Donnees : Réception de toutes demande se rapportant au RGPD, informations complémentaires sur la politique de confidentialité, etc…
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+Modifier les enregistrements du serveur DNS
+Pour pouvoir recevoir et envoyer des emails il faut modifier des informations sur le serveur DNS :
+
+- Serveur de mail : doit pointer sur le service de Microsoft Outlook.
+- MX : Mail Exchange : Indique le chemin que doit prendre l’email pour arriver sur le serveur
+- DMARC : Domain-base Message Authentication Reporting and Corformance : Indique comment le receveur de l’email doit traiter un email envoyer de notre domaine s’il échoue aux contrôles de sécurité
+- DKIM : Domain Keys Identified Mail (RFC 4871) : permet de signer les emails pour garantir la véracité des emails.
+- SPF : Sender Policy Framework (RFC 4408) : permet de garantir que les emails sont bien envoyés.
+  Enfin il faut réaliser des tests avec des outils tel que MXToolbox qui va permettre de faire en sorte que les messages sont bien envoyés et reçus.

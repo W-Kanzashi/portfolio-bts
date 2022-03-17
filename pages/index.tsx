@@ -15,7 +15,7 @@ export default function Index({ allPosts }: Props): JSX.Element {
       <Header />
 
       {/* Markdown parser display */}
-      <section>
+      <section className="container mx-auto px-5">
         {allPosts.map((heroPost) => (
           <HeroPost
             key={heroPost.title}

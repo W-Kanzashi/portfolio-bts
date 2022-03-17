@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <footer className="mx-auto flex max-w-6xl flex-row items-center justify-around rounded-md bg-watusi-500 pt-8 pb-10 shadow-xl">
+      <footer className="mx-auto mt-10 flex max-w-6xl flex-row items-center justify-around rounded-md bg-watusi-500 py-10 shadow-xl">
         <div>
           <h2>Portfolio CLARK</h2>
         </div>

@@ -15,7 +15,7 @@ type Props = {
 const HeroPost = ({ title, coverImage, date, excerpt, slug }: Props) => {
   return (
     <section
-      className="my-10 flex h-full flex-col items-center justify-around md:flex-row"
+      className="mx-auto flex max-w-2xl flex-col items-center justify-center md:flex-row"
       id={slug}
     >
       <div className="min-w-full px-2 md:flex md:flex-col md:gap-16 lg:gap-8">
@@ -37,7 +37,7 @@ const HeroPost = ({ title, coverImage, date, excerpt, slug }: Props) => {
           </p>
         </div>
       </div>
-      <div>
+      <div className="mb-8 md:mb-16">
         <CoverImage title={title} src={coverImage} slug={slug} />
       </div>
     </section>
