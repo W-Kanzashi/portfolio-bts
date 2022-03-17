@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import PostBody from "@components/Markdown/PostBody";
-import Header from "@components/Header";
+import Header from "@components/Markdown/Header";
 import PostHeader from "@components/Markdown/PostHeader";
 import { getPostBySlug, getAllPosts } from "lib/api";
 import PostTitle from "@components/Markdown/PostTitle";
@@ -33,6 +33,7 @@ const Post = ({ post }: Props) => {
             </title>
             <meta property="og:image" content={post.ogImage.url} />
           </Head>
+          <Header />
           <article className="mb-32 py-10 px-2">
             <PostHeader
               title={post.title}

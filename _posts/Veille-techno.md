@@ -1,15 +1,15 @@
 ---
-title: "Mail"
-excerpt: "Mise en place d'une boîte mail"
-coverImage: "/assets/image/pexels-olya-kobruseva-5417622.webp"
+title: "Veille Technologique"
+excerpt: "Comment je réalise ma veille technologique"
+coverImage: "/assets/image/pexels-digital-buggu-374559.webp"
 date: "2020-03-16T05:35:07.322Z"
 author:
   name: Keanui CLARK
   picture: "/assets/blog/authors/joe.jpeg"
 ogImage:
-  url: "/assets/image/pexels-olya-kobruseva-5417622.webp"
-  credit: "Photo by Olya Kobruseva from Pexels"
-  link: "https://www.pexels.com/photo/pink-and-gold-stationery-in-composition-5417622/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
+  url: "/assets/image/pexels-digital-buggu-374559.webp"
+  credit: "Photo by Digital Buggu from Pexels"
+  link: "https://www.pexels.com/photo/monitor-displaying-computer-application-374559/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

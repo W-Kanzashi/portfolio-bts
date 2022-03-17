@@ -14,8 +14,11 @@ type Props = {
 
 const HeroPost = ({ title, coverImage, date, excerpt, slug }: Props) => {
   return (
-    <section className="my-10 flex h-full flex-col items-center justify-around md:flex-row">
-      <div className="md:flex md:flex-col md:gap-16 lg:gap-8">
+    <section
+      className="my-10 flex h-full flex-col items-center justify-around md:flex-row"
+      id={slug}
+    >
+      <div className="min-w-full px-2 md:flex md:flex-col md:gap-16 lg:gap-8">
         <div>
           <h3 className="mb-4 text-4xl font-semibold leading-tight lg:text-5xl">
             <Link as={`/work/${slug}`} href="/work/[slug]">

@@ -4,8 +4,8 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
   return (
-    <div
-      className="prose-lg prose-stone prose-h1:font-bold dark:prose-invert md:prose-xl lg:prose-2xl"
+    <section
+      className="prose-body"
       dangerouslySetInnerHTML={{ __html: content }}
     />
   );

@@ -9,12 +9,13 @@ type Props = {
 };
 
 export default function Index({ allPosts }: Props): JSX.Element {
+  console.log(allPosts);
   return (
-    <div className="bg-watusi-600 subpixel-antialiased">
+    <main className="bg-watusi-600 subpixel-antialiased">
       <Header />
 
       {/* Markdown parser display */}
-      <main>
+      <section>
         {allPosts.map((heroPost) => (
           <HeroPost
             key={heroPost.title}
@@ -26,8 +27,8 @@ export default function Index({ allPosts }: Props): JSX.Element {
             excerpt={heroPost.excerpt}
           />
         ))}
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
 

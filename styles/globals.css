@@ -7,16 +7,18 @@ body {
   padding: 0;
 }
 
+@layer base {
+  li {
+    @apply list-inside list-disc;
+  }
+}
+
 @layer components {
-  h1 {
-    @apply text-6xl font-light tracking-tight text-woody-brown-500;
-  }
-
-  h2 {
-    @apply text-4xl font-light tracking-tight text-woody-brown-400;
-  }
-
   section.image {
     transform: translateZ(-1px);
+  }
+
+  .prose-body {
+    @apply prose-lg dark:prose-invert md:prose-xl lg:prose-2xl;
   }
 }

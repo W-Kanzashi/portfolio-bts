@@ -1,6 +1,6 @@
 ---
-title: "Mail"
-excerpt: "Mise en place d'une boîte mail"
+title: "E-commerce"
+excerpt: "Mise en place d'un site E-commerce"
 coverImage: "/assets/image/pexels-karolina-grabowska-5632382.webp"
 date: "2020-03-16T05:35:07.322Z"
 author:
