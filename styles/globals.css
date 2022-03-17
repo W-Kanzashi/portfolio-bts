@@ -19,6 +19,6 @@ body {
   }
 
   .prose-body {
-    @apply prose-lg dark:prose-invert md:prose-xl lg:prose-2xl;
+    @apply prose prose-lg md:prose-xl lg:prose-2xl;
   }
 }

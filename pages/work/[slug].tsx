@@ -6,7 +6,6 @@ import PostHeader from "@components/Markdown/PostHeader";
 import { getPostBySlug, getAllPosts } from "lib/api";
 import PostTitle from "@components/Markdown/PostTitle";
 import Head from "next/head";
-import { CMS_NAME } from "lib/constants";
 import markdownToHtml from "lib/markdownToHtml";
 import PostType from "types/posts";
 
@@ -22,19 +21,17 @@ const Post = ({ post }: Props) => {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <main className="container mx-auto rounded-2xl bg-watusi-600/80 px-5 pt-20 shadow-2xl shadow-watusi-500">
+    <main className="container mx-auto bg-watusi-600/80 px-2 pt-20 shadow-watusi-500 drop-shadow-2xl md:rounded-b-2xl">
       {router.isFallback ? (
-        <PostTitle>Loading…</PostTitle>
+        <PostTitle>Chargement...</PostTitle>
       ) : (
         <>
           <Head>
-            <title>
-              {post.title} | Next.js Blog Example with {CMS_NAME}
-            </title>
+            <title>{post.title}</title>
             <meta property="og:image" content={post.ogImage.url} />
           </Head>
           <Header />
-          <article className="mb-32 py-10 px-2">
+          <article className="mb-10 py-10 md:mb-32">
             <PostHeader
               title={post.title}
               coverImage={post.coverImage}

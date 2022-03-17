@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <section className="prose min-w-full max-w-none px-2 pt-32 md:prose-lg lg:prose-xl lg:prose-2xl">
+    <section className="prose min-w-full max-w-none px-2 pt-6 md:prose-lg md:pt-32 lg:prose-xl lg:prose-2xl">
       <h2 className="text-woody-brown-600">Introduction</h2>
       <p className="text-woody-brown-500">
         Je m&apos;appelle Keanui CLARK et je suis étudiant en BTS Services

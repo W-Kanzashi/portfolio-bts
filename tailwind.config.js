@@ -9,13 +9,8 @@ module.exports = {
     extend: {},
     colors: {
       transparent: "transparent",
-      black: colors.black,
-      white: colors.white,
       gray: colors.gray,
-      emerald: colors.emerald,
-      indigo: colors.indigo,
-      yellow: colors.yellow,
-      red: colors.red,
+      teal: colors.teal,
       watusi: {
         DEFAULT: "#FEDBD0",
         50: "#FFFFFF",
