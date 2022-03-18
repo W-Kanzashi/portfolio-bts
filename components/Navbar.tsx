@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed left-0 bottom-2 z-10 flex w-full flex-row items-center justify-around rounded-md bg-watusi-500 px-3 py-4 text-2xl shadow-xl md:bottom-[92%] md:right-1/2 md:left-1/2 md:top-2 md:w-[60rem] md:-translate-x-1/2 md:px-10">
+      <nav className="fixed left-0 bottom-2 z-10 flex w-full flex-row items-center justify-between rounded-md bg-watusi-500 px-3 py-4 text-2xl shadow-xl md:bottom-[92%] md:right-1/2 md:left-1/2 md:top-2 md:w-[60rem] md:-translate-x-1/2 md:px-10">
         <Link href="/">
           <a className="duration-300 ease-in-out hover:scale-105 hover:text-woody-brown-600 hover:drop-shadow-md">
             <h2 className="">Portfolio CLARK</h2>

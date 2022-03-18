@@ -30,8 +30,8 @@ const Post = ({ post }: Props) => {
             <title>{post.title}</title>
             <meta property="og:image" content={post.ogImage.url} />
           </Head>
-          <Header />
-          <article className="mb-10 py-10 md:mb-32">
+          <article className="mx-auto mb-10 max-w-6xl py-10 md:mb-32">
+            <Header />
             <PostHeader
               title={post.title}
               coverImage={post.coverImage}
