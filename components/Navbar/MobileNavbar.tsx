@@ -35,6 +35,7 @@ export default function MobileNavbar(props: any): JSX.Element {
           </h2>
           {Links.map(({ link, slug, labelIcon }: Links) => (
             <LinkNavbar
+              key={slug}
               link={link}
               slug={slug}
               labelIcon={labelIcon}
