@@ -12,10 +12,23 @@ ogImage:
   link: "https://www.pexels.com/photo/pink-and-gold-stationery-in-composition-5417622/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+## Gestion des clients
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+Pour gérer efficacement les rendez-vous avec clients (Travaux, état des lieux, dépannages, remplacements, installations, etc…), il existe beaucoup de solutions :
+-	Applications internet
+-	Application smartphone
+-	Calendrier
+-	Etc…
 
-## Lorem Ipsum
+Chaque service possède des avantages et des inconvénients et à la suite de recherches les différents services proposés non pas été satisfaisant (prix trop élevé, fonctionnalité ne répondant pas au besoin, etc…).
+Nous avons donc décidé de concevoir une application pour réaliser cette tâche.
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+L’application doit pouvoir ajouter un client avec des informations et avoir la possibilité d’ajouter un rendez-vous avec la tâche à effectuer.
+
+## La solution
+Le projet doit donc comporter une base de données pour stocker les clients et leurs travaux, une interface web pour afficher les données et un système d’authentification pour garantir la confidentialité des données.
+
+## Les choix
+- Le Framework choisi : Next JS avec typecript. Ce qui permet la création de page dynamique, de création d’api simplifié, l’utilisation du Framework React qui est conçu "safe by default" (sûr par defaut).
+- MongoDB Base de données non relationnelle au format JSON qui permet d’être très bien intégré au Framework Next JS.
+- Création d’une API REST pour faire les requêtes en base de données.

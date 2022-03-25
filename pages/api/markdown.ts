@@ -23,7 +23,7 @@ interface Date {
 }
 
 // Get the markdown directory
-const docsDirectory = join(process.cwd(), "docs");
+const docsDirectory = join(process.cwd(), "_posts");
 
 export function getDocsSlugs() {
   return fs.readdirSync(docsDirectory);
