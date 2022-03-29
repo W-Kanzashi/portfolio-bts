@@ -54,6 +54,9 @@ const generateCSP = ({ scriptHashes }: generateCSPProps = {}) => {
   // style-src
   add("style-src", `'unsafe-inline'`);
 
+  // style-src
+  add("style-src-elem", `'unsafe-inline'`);
+
   // worker-src
   add("worker-src", `'self'`);
 
