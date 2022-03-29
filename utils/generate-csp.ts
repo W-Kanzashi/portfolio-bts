@@ -52,7 +52,7 @@ const generateCSP = ({ scriptHashes }: generateCSPProps = {}) => {
   add("default-src", `https:`);
 
   // style-src
-  add("style-src", `'self'`);
+  add("style-src", `'unsafe-inline'`);
 
   // worker-src
   add("worker-src", `'self'`);
