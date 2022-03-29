@@ -1,0 +1,22 @@
+{
+  "name": "CLARK Keanui Portfolio",
+  "short_name": "CK Portfolio",
+  "description": "Portfolio de Clark Keanui pour l'épreuve de BTS SIO Option SLAM",
+  "theme_color": "#442C2E",
+  "background_color": "#FEDBD0",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

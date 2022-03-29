@@ -9,10 +9,8 @@ import NavbarSection from "const/Links";
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const [section, setSection] = useState("");
 
   const toggleNavbar = () => setNavbarOpen(!navbarOpen);
-  const toggleSection = (e: any) => setSection(e.target.value);
 
   return (
     <>
@@ -27,10 +25,7 @@ export default function Navbar() {
           <div className="flex flex-col gap-6 text-left">
             {NavbarSection.map(({ href, text }) => (
               <Link href={`/#${href}`} key={href}>
-                <a
-                  className="font-semibold uppercase text-woody-brown-400 hover:text-woody-brown-500"
-                  onClick={toggleSection}
-                >
+                <a className="font-semibold uppercase text-woody-brown-400 hover:text-woody-brown-500">
                   <h3 className="flex flex-row items-center gap-3 duration-500 ease-in-out hover:translate-x-2">
                     <FaChevronRight /> {text}
                   </h3>
@@ -41,7 +36,13 @@ export default function Navbar() {
         </section>
 
         {/* Personal info */}
-        <section>
+        <section className="flex flex-col gap-3">
+          <h2 className="text-xl font-bold text-woody-brown-400">
+            CLARK Keanui
+          </h2>
+          <h2 className="text-semibold text-xl text-woody-brown-400">
+            BTS SIO Option SLAM
+          </h2>
           <a
             href="https://github.com/W-Kanzashi/portfolio-bts"
             target="_blank"

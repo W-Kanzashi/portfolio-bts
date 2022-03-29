@@ -1,4 +1,5 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
+import Head from "next/head";
 import Post from "types/posts";
 import { getAllPosts } from "lib/api";
 import HeroPost from "@components/Markdown/HeroPost";
@@ -38,26 +39,31 @@ export default function Index({ allPosts }: Props): JSX.Element {
   }
 
   return (
-    <main
-      className="ml-[18%] h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth duration-1000 no-scrollbar"
-      ref={scrollRef as any}
-      onScroll={handleSection}
-    >
-      <PageSelector section={section} setSection={handleSection} />
-      <Header />
-      {/* Markdown parser display */}
-      {allPosts.map((heroPost) => (
-        <HeroPost
-          key={heroPost.title}
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-      ))}
-    </main>
+    <>
+      <Head>
+        <title>CLARK Keanui - Portofolio</title>
+      </Head>
+      <main
+        className="ml-[18%] h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth duration-1000 no-scrollbar"
+        ref={scrollRef as any}
+        onScroll={handleSection}
+      >
+        <PageSelector section={section} setSection={handleSection} />
+        <Header />
+        {/* Markdown parser display */}
+        {allPosts.map((heroPost) => (
+          <HeroPost
+            key={heroPost.title}
+            title={heroPost.title}
+            coverImage={heroPost.coverImage}
+            date={heroPost.date}
+            author={heroPost.author}
+            slug={heroPost.slug}
+            excerpt={heroPost.excerpt}
+          />
+        ))}
+      </main>
+    </>
   );
 }
 
