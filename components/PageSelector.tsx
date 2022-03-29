@@ -12,7 +12,7 @@ export default function PageSelector({
     <>
       <section className="absolute right-2 top-1/2 flex -translate-y-1/2 flex-col gap-1">
         {NavbarSection.map(({ href }: any) => (
-          <Link href={`#${href}`} key={href}>
+          <Link href={`#${href}`} key={href} passHref>
             <button
               className={
                 "h-5 w-5 rounded-full border border-woody-brown-500 " +

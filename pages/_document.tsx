@@ -4,8 +4,14 @@ import hashInlineScripts from "utils/hash-inline-script";
 
 export default function Document(): JSX.Element {
   const { scriptHashes } = hashInlineScripts([
-    <script dangerouslySetInnerHTML={{ __html: `console.log('a')` }} />,
-    <script dangerouslySetInnerHTML={{ __html: `console.log('b')` }} />,
+    <script
+      key="first"
+      dangerouslySetInnerHTML={{ __html: `console.log('a')` }}
+    />,
+    <script
+      key="second"
+      dangerouslySetInnerHTML={{ __html: `console.log('b')` }}
+    />,
   ]);
 
   return (

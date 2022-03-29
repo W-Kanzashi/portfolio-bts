@@ -74,7 +74,7 @@ const generateCSP = ({ scriptHashes }: generateCSPProps = {}) => {
   add("script-src", `'self'`);
   scriptHashes && scriptHashes.forEach((hash) => add("script-src", hash));
 
-  // return the object in a formatted value (this won't work on IE11 without a polyfill!)
+  // return the object in a formatted value
   return Object.entries(policy)
     .map(([key, value]) => `${key} ${value.join(" ")}`)
     .join("; ");
