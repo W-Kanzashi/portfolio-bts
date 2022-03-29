@@ -19,26 +19,18 @@ Le domaine de l’informatique évolue tous les jours et à une vitesse très im
 ## Comment ?
 
 Pour réaliser les différents projets en entreprise j’utilise différents services (GitHub, Cloudflare, Visual Studio Code, Typescript, etc.…).
-Tous ces services demandent de connaître le fonctionnement d’internet et le développement sur le web.
+Tous ces services demandent de connaître le fonctionnement d’internet et le développement web.
 
-## Next JS
+## Javascript et Typescript
+Un choix difficile à faire car Typescript "n'est que" javascript typé. 
+### Pourquoi avoir choisi Typescript ?
+Tout d’abord j’ai commencé le développement avec deux langages de programmation très fortement typé (C et C++) et j'ai pris l’habitude de devoir travailler avec cette contrainte. 
+Ensuite Typescript offre une aide au développement si l’écriture est correcte :
+-	Erreur à la compilation
+-	Autocomplétions
+-	L’ajout de règles de développement (ne pas pouvoir instancier une variable à ```null``` par exemple)
 
-Next JS est un Framework qui permet de créer et mettre en place des sites et application internet modernes et performants.
-Il utilise la bibliothèque Open-source React (écrit en javascript et inventé par Jordan Walke) et maintenue par Meta, la communauté et d’autres entreprises partenaire.
-Next JS peut être appris sur le site officiel de [Vercel](https://vercel.com/). Il propose un tutoriel pour démarrer, des liens vers les sites qui l’utilise et une sandbox(bac à sable) avec des tutoriels.
-
-## GitHub
-
-[GitHub](https://github.com/) est un service d’hébergement de projet de développement et de contrôle de version(versionning) basé sur le projet open-source git et proposé par Microsoft.
-Le service propose une version gratuite qui est largement suffisant pour la majorité des projets. Mais si une entreprise veut réaliser un projet très important il est possible de prendre un abonnement avec des fonctionnalité bien plus poussé.
-
-## Typescript
-
-Typescript est un langage de programmation dérivé de Javascript qui permet de typer les variables, le langage est développé par Microsoft. Ceci permet plus de contrôle sur le code, la sécurité (évité d’envoyer du code non voulu, etc.…) et une maintenance plus simple. Mais impose une complexité supplémentaire à la conception et l’écriture.
-L’apprentissage de Typescript peut se faire directement sur le site officiel de [TypeScript](https://www.typescriptlang.org/) avec des tutoriels et beaucoup d’exemples.
-
-## MongoDB
-
-MongoDB est un système de base de données (NoSQL) orienté documents qui ne nécessite pas de schéma prédéfini pour les données (opposé au SQL).
-Son utilisation est beaucoup plus simplifiée que pour le SQL et elle est très adapté pour les bases de données peu complexe.
-La documentation officielle [MongoDB](https://www.mongodb.com/) propose un début d’apprentissage même si elle est peu adapté pour les débutant (utilisation de javascript avancé).
+#### Les inconvénients
+-	Le développement est plus compliqué (devoir écrire nos propres types, les erreurs de compilations sont plus difficiles à corriger
+-	Les tutoriels sont bien plus rares
+-	Les dépendances ne sont pas toutes écrites avec Typescript, il faut donc trouver une alternative et les documentations sont parfois très peu claire)

@@ -27,12 +27,15 @@ export default function Index({ allPosts }: Props): JSX.Element {
         setSection("Mail");
         break;
       case 3:
-        setSection("Client");
+        setSection("Solution");
         break;
       case 4:
-        setSection("E-commerce");
+        setSection("Client");
         break;
       case 5:
+        setSection("E-commerce");
+        break;
+      case 6:
         setSection("Veille-techno");
         break;
     }

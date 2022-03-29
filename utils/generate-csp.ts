@@ -74,7 +74,7 @@ const generateCSP = ({ scriptHashes }: generateCSPProps = {}) => {
   scriptHashes && scriptHashes.forEach((hash) => add("script-src-elem", hash));
 
   // script-src
-  add("script-src", `'self' portfolio.ameung.com`);
+  add("script-src", `'unsafe-eval' 'self' portfolio.ameung.com`);
   scriptHashes && scriptHashes.forEach((hash) => add("script-src", hash));
 
   // return the object in a formatted value
