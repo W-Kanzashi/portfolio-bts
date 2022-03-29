@@ -52,13 +52,10 @@ const generateCSP = ({ scriptHashes }: generateCSPProps = {}) => {
   add("default-src", `https:`);
 
   // style-src
-  add("style-src", `'unsafe-inline'`);
+  add("style-src", `'unsafe-inline' portfolio.ameung.com`);
 
   // style-src
-  add(
-    "style-src-elem",
-    `'self' portfolio.ameung.com portfolio-clark.vercel.app'`
-  );
+  add("style-src-elem", `'self' portfolio.ameung.com'`);
 
   // worker-src
   add("worker-src", `'self'`);
@@ -77,7 +74,7 @@ const generateCSP = ({ scriptHashes }: generateCSPProps = {}) => {
   scriptHashes && scriptHashes.forEach((hash) => add("script-src-elem", hash));
 
   // script-src
-  add("script-src", `'self'`);
+  add("script-src", `'self' portfolio.ameung.com`);
   scriptHashes && scriptHashes.forEach((hash) => add("script-src", hash));
 
   // return the object in a formatted value
