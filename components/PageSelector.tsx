@@ -21,6 +21,7 @@ export default function PageSelector({
               value={href}
               onClick={handleSection}
               name={href}
+              title={href}
             ></button>
           </Link>
         ))}
