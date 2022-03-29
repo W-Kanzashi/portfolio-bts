@@ -55,7 +55,10 @@ const generateCSP = ({ scriptHashes }: generateCSPProps = {}) => {
   add("style-src", `'unsafe-inline'`);
 
   // style-src
-  add("style-src-elem", `'unsafe-inline'`);
+  add(
+    "style-src-elem",
+    `'self' portfolio.ameung.com portfolio-clark.vercel.app'`
+  );
 
   // worker-src
   add("worker-src", `'self'`);
