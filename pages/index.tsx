@@ -1,33 +1,62 @@
-import HeroPost from "@components/Markdown/HeroPost";
-import { getAllPosts } from "lib/api";
+import React, { useState, useRef } from "react";
 import Post from "types/posts";
-
+import { getAllPosts } from "lib/api";
+import HeroPost from "@components/Markdown/HeroPost";
 import Header from "@components/Header";
+import PageSelector from "@components/PageSelector";
+import useScrollPercentage from "@components/ScrollPercentage";
 
 type Props = {
   allPosts: Post[];
 };
 
 export default function Index({ allPosts }: Props): JSX.Element {
-  console.log(allPosts);
-  return (
-    <main className="bg-watusi-600 subpixel-antialiased">
-      <Header />
+  const [section, setSection] = useState("Intro");
+  const [scrollRef, scrollPercentage] = useScrollPercentage();
 
+  function handleSection() {
+    switch ((scrollPercentage as number) / 20) {
+      case 0:
+        setSection("Intro");
+        break;
+      case 1:
+        setSection("Migration");
+        break;
+      case 2:
+        setSection("Mail");
+        break;
+      case 3:
+        setSection("Client");
+        break;
+      case 4:
+        setSection("E-commerce");
+        break;
+      case 5:
+        setSection("Veille-techno");
+        break;
+    }
+  }
+
+  return (
+    <main
+      className="ml-[18%] h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth duration-1000 no-scrollbar"
+      ref={scrollRef as any}
+      onScroll={handleSection}
+    >
+      <PageSelector section={section} setSection={handleSection} />
+      <Header />
       {/* Markdown parser display */}
-      <section className="container mx-auto px-5">
-        {allPosts.map((heroPost) => (
-          <HeroPost
-            key={heroPost.title}
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-          />
-        ))}
-      </section>
+      {allPosts.map((heroPost) => (
+        <HeroPost
+          key={heroPost.title}
+          title={heroPost.title}
+          coverImage={heroPost.coverImage}
+          date={heroPost.date}
+          author={heroPost.author}
+          slug={heroPost.slug}
+          excerpt={heroPost.excerpt}
+        />
+      ))}
     </main>
   );
 }

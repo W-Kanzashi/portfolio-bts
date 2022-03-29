@@ -21,7 +21,7 @@ const Post = ({ post }: Props) => {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <main className="container mx-auto bg-watusi-600/80 px-2 pt-20 shadow-watusi-500 drop-shadow-2xl md:rounded-b-2xl">
+    <main className="ml-[18%] px-2 pt-20 shadow-watusi-500 drop-shadow-2xl md:rounded-b-2xl ">
       {router.isFallback ? (
         <PostTitle>Chargement...</PostTitle>
       ) : (

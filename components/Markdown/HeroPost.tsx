@@ -15,7 +15,7 @@ type Props = {
 const HeroPost = ({ title, coverImage, date, excerpt, slug }: Props) => {
   return (
     <section
-      className="mx-auto flex max-w-2xl flex-col items-center justify-center md:flex-row"
+      className="flex h-screen w-full snap-center flex-col items-center justify-center text-center"
       id={slug}
     >
       <div className="min-w-full px-2 md:flex md:flex-col md:gap-16 lg:gap-8">

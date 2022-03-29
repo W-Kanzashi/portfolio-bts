@@ -1,14 +1,11 @@
 import Navbar from "@components/Navbar";
-import Footer from "@components/Footer";
+import React from "react";
 
 export default function Layout({ children }: any) {
   return (
     <>
       <Navbar />
-      <main className="mx-auto min-h-screen max-w-7xl shadow-xl shadow-watusi-600">
-        {children}
-      </main>
-      <Footer />
+      {children}
     </>
   );
 }

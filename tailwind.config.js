@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: [
@@ -11,6 +12,7 @@ module.exports = {
       transparent: "transparent",
       gray: colors.gray,
       teal: colors.teal,
+      white: colors.white,
       watusi: {
         DEFAULT: "#FEDBD0",
         50: "#FFFFFF",
@@ -39,5 +41,18 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".no-scrollbar::-webkit-scrollbar": {
+          display: "none",
+        },
+        ".no-scrollbar": {
+          "-ms-overflow-style": "none",
+          "scrollbar-width": "none",
+        },
+      });
+    }),
+  ],
 };
