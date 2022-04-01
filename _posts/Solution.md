@@ -1,5 +1,5 @@
 ---
-title: "Solution"
+title: "Les Solutions"
 excerpt: "La liste des solutions avec leurs avantages et inconvénients"
 coverImage: "/assets/image/pexels-olya-kobruseva-5417622.webp"
 date: "2020-03-28T05:35:07.322Z"
@@ -16,7 +16,9 @@ ogImage:
 
 ### Next JS
 Next JS est un Framework qui permet de créer et mettre en place des sites et applications web modernes et performants.  
-Il utilise la bibliothèque Open-source React (écrit en javascript et inventé par Jordan Walke) et maintenue par Meta, la communauté et d’autres entreprises partenaire.   
+
+Il utilise la bibliothèque Open-source [React](https://reactjs.org/) (écrit en javascript et inventé par Jordan Walke) et maintenue par Meta, la communauté et d’autres entreprises partenaire.   
+
 La documentation de [Vercel](https://vercel.com/) propose des tutoriels pour démarrer, des liens vers les sites qui l’utilise et une sandbox (bac à sable) avec des exemples de projets.   
 #### Avantages
 Apporte des solutions à des problèmes complexes tel que l’optimisation des sites internet, l’implémentation de surcouches qui permet de simplifier la vie du développeur : 
@@ -29,19 +31,7 @@ Apporte des solutions à des problèmes complexes tel que l’optimisation des s
 Des explications seront données dans chaque partie utilisant une des fonctionnalités.  
 Le plus grand avantage est qu’il n’est pas nécessaire de connaître le javascript pour débuter.
 #### Inconvénient
-Le Framework est magique
-
-
-### GitHub
-
-[GitHub](https://github.com/) est un service d’hébergement de projet de développement et de contrôle de version(versionning) basé sur le projet open-source git et proposé par Microsoft.
-Le service propose une version gratuite qui est largement suffisant pour la majorité des projets (contrôle de version, développement en groupe, mise en ligne de site internet statique avec Github Pages, plugins gratuit, etc…). Mais si une entreprise veut réaliser un projet très important il est possible de prendre un abonnement avec des fonctionnalité bien plus poussé.
-
-### Typescript
-
-Typescript est un langage de script dérivé de Javascript qui permet de typer les variables, le langage est développé par Microsoft.
-Ceci permet plus de contrôle sur le code, la sécurité et une maintenance plus simple. Mais impose une complexité supplémentaire à la conception et l’écriture.
-Une documentation de Typescript est disponible sur le site officiel de [TypeScript](https://www.typescriptlang.org/) avec des tutoriels et des d’exemples.
+La documentation n'est pas très claire pour les débutants.
 
 ### MongoDB
 

@@ -5,7 +5,7 @@ import { getAllPosts } from "lib/api";
 import HeroPost from "@components/Markdown/HeroPost";
 import Header from "@components/Header";
 import PageSelector from "@components/PageSelector";
-import useScrollPercentage from "@components/ScrollPercentage";
+import useScrollPercentage from "utils/ScrollPercentage";
 
 type Props = {
   allPosts: Post[];

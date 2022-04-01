@@ -56,7 +56,40 @@ Pour finir la création d’alias en fonction de la section et du domaine de l�
 - Compta : Envoie et réception de document se rapportant à la comptabilité de l’entreprise
 - Donnees : Réception de toutes demande se rapportant au RGPD, informations complémentaires sur la politique de confidentialité, etc…
 
-Modifier les enregistrements du serveur DNS
+#### Etapes de mise en place
+*Pour des raisons de sécurité, les étapes de mise en place çi dessous utilise des captures d'écran qui ne représentes aucunes personnes de l'entreprise*
+##### Création d'un groupe pour assigner des règles aux utilisateurs
+Pour pouvoir ajouter des alias il faut d'abord ajouter un groupe d'utilisateur avec des règles.
+![Ajouter un groupe](/assets/mail/Untitled-26.png)
+
+Ensuite il faut choisir le type du groupe.
+Dans notre cas il faut choisir **Distribution** pour pouvoir envoyer et recevoir des emails.
+![Choix du type du groupe](/assets/mail/Untitled-27.png)
+
+Donner un nom et une description pour facilité la gestion du groupe.
+![Ecrire un nom et une description](/assets/mail/Untitled-28.png)
+
+Choisir le nom de domaine du groupe auquel il va être associé.
+![Choix des règles](/assets/mail/Untitled-29.png)
+
+##### Ajouter les utilisateurs au groupe précédement créé
+Choisir le groupe dans lequel il faut ajouter les utilisateurs.
+![Assigner les utilisateurs au groupe](/assets/mail/Untitled-32.png)
+
+Cliquer sur la section **Membres** et **Gestion des membres**
+![Chemin pour modifier/ajouter les utilisateurs](/assets/mail/Untitled-33.png)
+
+Faire le choix des utilisateurs à ajouter au groupe.
+![Choix des utilisateurs](/assets/mail/Untitled-34.png)
+
+Vérifier que les utilisateurs sont biens ajoutés au groupe.
+![Vérifier que les utilisateurs sont biens ajouté](/assets/mail/Untitled-36.png)
+
+Pour finir il faut patienter un peu (2-3 minutes) avant de pouvoir envoyer et recevoir des email.
+
+:warning: Si au bout de 1h vous ne pouvez toujours pas envoyer ou recevoir d'email il faut supprimer le groupe et recommencer. Je n'ai pas trouver d'autres solutions à ce problème.
+
+#### Modifier les enregistrements du serveur DNS
 Pour pouvoir recevoir et envoyer des emails il faut modifier des informations sur le serveur DNS :
 
 - Serveur de mail : doit pointer sur le serveur qui propose le service de Microsoft Outlook
@@ -65,3 +98,11 @@ Pour pouvoir recevoir et envoyer des emails il faut modifier des informations su
 - DKIM : Domain Keys Identified Mail (RFC 4871) : permet de signer les emails pour garantir la véracité des emails
 - SPF : Sender Policy Framework (RFC 4408) : permet de garantir que les emails sont bien envoyés
   Enfin il faut réaliser des tests avec des outils tel que MXToolbox qui va permettre de faire en sorte que les messages sont bien envoyés et reçus
+- SRV : Service : permet de spécifier un hôte (domaine/IP) et un port pour les services spécifiques (ici le serveur de mail)
+
+##### Pourquoi spécifier un port pour le serveur de mail ?
+Certains protocoles Internet, tels que IMAP, SIP et XMPP, doivent se connecter à un port spécifique en plus de se connecter à un serveur spécifique. Les enregistrements SRV permettent de spécifier un port dans le DNS.
+
+## Crédit 
+Les images : https://adamtheautomator.com/exchange-distribution-group/
+Informations DNS : https://www.cloudflare.com/fr-fr/learning/dns/dns-records/
