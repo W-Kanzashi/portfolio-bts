@@ -43,4 +43,12 @@ Il est aussi possible de télécharger le projet ici [Application Client](https:
 
 Pour le d'éveloppement du projet, j'ai utilisé la solution gratuite de MongoDB Atlas.
 ![Page d'accueil](/assets/client/mongodb_free_tier.png)
+La solution Mongo Atlas permet au développeur d'utiliser une base de donnée MongoDB sans avoir besoin de l'installer localement et entièremen gratuitement. Il y a différent moyen de s'autentifier :
+- Utilisateur et mot de passe
+- Certificat 501x
+- Microsoft AD
+- Kerberos
+- etc...
 
+Cette facilité d'utilisation permet de simplifier l'intégration et la sécurité de MongoDB à Next JS.  
+Il est même possible de visualiser des statistiques et d'ajouter des règles de sur les collections.
