@@ -12,12 +12,10 @@ ogImage:
   link: "https://www.pexels.com/photo/pink-and-gold-stationery-in-composition-5417622/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
 ---
 
-
 # Mise en place d'un site internet
-Pour développer la présence en ligne de l'organisation, il faut être sur internet. Le principal moteur de recherche utilisé est Google, il faut donc connaître la manière dont le moteur de recherche classe les pages.  
-Google de fournit pas de règles à suivre mais plutôt des recommandations.  
-Depuis mai 2021 Google a publié une mise à jour qui présente la nouvelle méthode de classement des pages.
-Cette nouvelle méthode est basée sur l'expérience utilisateur (UX).
+Le principal moteur de recherche utilisé est Google, il faut donc connaître la manière dont le moteur de recherche classe les sites internets.  
+Google de fournit pas de règles à suivre mais plutôt des recommandations et depuis mai 2021 Google a publié une mise à jour qui présente sa nouvelle méthode de classement des pages.
+Cette nouvelle méthode est basée sur l'expérience utilisateur (UX : perception et ressentiment de l'utilisateur qui utilise le service).
 ![Classement des pages par Google](/assets/siteInternet/eff8c469fa030ffae2dba57ad165fbdaa5933f10-1080x1920.png)   
 
 Elle est découpée en trois parties :
@@ -31,10 +29,10 @@ Et des autres paramètres :
 - Site responsif : utilisation avec un smartphone, tablette, ordinateur portable, etc.
 - Le contenu du site doit correspondre aux attentes de l'utilisateur
 
-Plus d'informations sur le site de [Guy Dumais](https://guydumais.digital/blog/ready-for-the-google-page-experience-update/).
+Plus d'informations sur le site de [Guy Dumais](https://guydumais.digital/fr/blog/pret-pour-la-mise-a-jour-experience-de-page-google/).
 
 ## Le référencement 
-Sujet compliqué et très mal documenté ou la réponse officielle est « est-ce que le visiteur à envie de voir votre site internet et resté sur le site »
+Sujet compliqué et très mal documenté où la réponse officielle est "est-ce que le visiteur à envie de voir votre site internet et resté sur le site".  
 De manière simple il consiste à fournir au visiteur de la page la réponse exacte à sa demande. Comme par exemple, si le client recherche un serrurier qui travail les jours férié, le moteur de recherche va fournir une liste de sites internet qui correspond au maximum à la recherche. Mais il ne va pas regarder uniquement si le site possède les mots clé recherché, il va aussi regarder la pertinence du site, si les utilisateurs sont impliqués, etc...  
 Il faut donc faire attention à ce que le site contienne des informations pertinentes :
 - Titre de la page
@@ -46,10 +44,11 @@ Et que l'utilisateur ait envie de rester sur le site internet :
 - Une interface très claire et simple
 - Un moyen pour les personnes qui utilise les outils de lecture d’écran de naviguer
 - Un site très léger pour les personnes qui ne possède pas de connexion rapide (moins de 3G ou 4G très lente)
-- Prévoir une utilisation sur smartphone car d'après une étude de Google, la plus grande partie des recherches sont faites sur smartphone ([Google Insight]( https://www.thinkwithgoogle.com/intl/fr-fr/insights/)).
+- Prévoir une utilisation sur smartphone car d'après une étude de Google, la plus grande partie des recherches sont faites sur smartphone ([Google Insight](https://www.thinkwithgoogle.com/intl/fr-fr/insights/)).
 
 ## Le chargement de la page
 Le site internet est disponible sur internet mais il y a une dernière chose à vérifier avant de pouvoir valider le site et c'est la vitesse de chargement de celle-ci.  
+![Représentation d'attente d'une page internet](/assets/siteInternet/client_server.png)  
 Comme indiqué plutôt, la vitesse de chargement joue énormément sur l'expérience utilisateur, car les utilisateurs n’aiment pas attendre. Il faut donc tester le site avec des outils :
 - [Google Page Speed](https://developers.google.com/speed/pagespeed/insights/)
 - [GiftOfSpeed](https://www.giftofspeed.com/)
@@ -62,14 +61,12 @@ Plusieurs choses à vérifier si le site est lent :
 - Supprimer le code qui n'est pas utilisé
 - Convertir les images en format webp ou avif (compression améliorée sans perte de qualité) : certain service fournit une conversion à la volée (conversion coté serveur au moment que l'utilisateur en a besoin)
 - Fournir les images en fonction de la taille de l'appareil. Une image en 4000x4000 pixels n'est pas nécessaire sur un smartphone
-
 ## Next JS
-Comme évoqué dans la partie "Les Solutions" le choix de Next JS est celui qui correspond le mieux au besoin.
+Comme évoqué dans la partie "[Les Solutions](/Solutions)" le choix de Next JS est celui qui correspond le mieux au besoin.
 
 ### Pourquoi ?
 Bien qu'il soit possible d'écrire un site internet avec du HTML, du CSS et du Javascript, il est très difficile de le maintenir, car chaque page contient des parties différentes (contenue de la page) et des parties similaires (Bar de navigation, pied de page, etc…).  
-Ensuite pour qu'une page internet soit visible par le visiteur il faut que le serveur envoie cette page qui sera générer ou non.  
-![Représentation d'attente d'une page internet](/assets/siteInternet/client_server.png)
+Ensuite pour qu'une page internet soit visible par le visiteur il faut que le serveur envoie cette page qui sera générer ou non.
 
 ### Static Site Generation
 Une solution apporté par React est de pouvoir exporté (générer) le site internet à partir de ce que React (et tous les Framework javascript) appelle [**"Components"**](https://reactjs.org/docs/react-component.html#gatsby-focus-wrapper).
@@ -109,4 +106,3 @@ Finaliser le site internet en vérifiant que l'optimisation, la sécurité du si
 - L'utilisateur n'a pas besoin de charger le pied de page si il ne la voie pas
 - Préférer sauvegarde les données reçues par les requêtes en base de données pour ne pas avoir à les recharger à chaque fois
 - Préférer le chargement des images en fonction de la taille de l'appareil
-- 
