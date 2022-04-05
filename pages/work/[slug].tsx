@@ -21,7 +21,7 @@ const Post = ({ post }: Props) => {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <main className="ml-[18%] px-2 pt-20 shadow-watusi-500 drop-shadow-2xl md:rounded-b-2xl ">
+    <main className="ml-[18%] pl-5 drop-shadow-2xl 2xl:pl-5 2xl:pt-20 ">
       {router.isFallback ? (
         <PostTitle>Chargement...</PostTitle>
       ) : (
@@ -30,7 +30,7 @@ const Post = ({ post }: Props) => {
             <title>{post.title}</title>
             <meta property="og:image" content={post.ogImage.url} />
           </Head>
-          <article className="mx-auto mb-10 max-w-6xl py-10 md:mb-32">
+          <article className="mx-auto max-w-6xl md:mb-8 2xl:mb-10 2xl:py-10">
             <Header />
             <PostHeader
               title={post.title}

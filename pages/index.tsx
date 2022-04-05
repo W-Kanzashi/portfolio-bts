@@ -15,8 +15,9 @@ export default function Index({ allPosts }: Props): JSX.Element {
   const [section, setSection] = useState("Intro");
   const [scrollRef, scrollPercentage] = useScrollPercentage();
 
+  console.log((scrollPercentage as number) / 14);
   function handleSection() {
-    switch ((scrollPercentage as number) / 20) {
+    switch (Math.floor((scrollPercentage as number) / 14)) {
       case 0:
         setSection("Intro");
         break;
@@ -27,13 +28,13 @@ export default function Index({ allPosts }: Props): JSX.Element {
         setSection("Mail");
         break;
       case 3:
-        setSection("Solution");
+        setSection("SEO");
         break;
       case 4:
         setSection("Client");
         break;
       case 5:
-        setSection("E-commerce");
+        setSection("GestionPatrimoine");
         break;
       case 6:
         setSection("Veille-techno");

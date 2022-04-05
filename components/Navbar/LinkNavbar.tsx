@@ -18,7 +18,7 @@ export default function LinkNavbar(props: Props) {
     <button className={props.className} key={props.slug}>
       <Link href={`#${props.slug}`}>
         <a onClick={toggleNavbar}>
-          <h3 className="flex flex-row items-center gap-3 text-2xl font-bold text-woody-brown-500">
+          <h3 className="flex flex-row items-center gap-3 text-lg font-bold text-woody-brown-500 xl:text-lg">
             {props.labelIcon}
             {props.link}
           </h3>

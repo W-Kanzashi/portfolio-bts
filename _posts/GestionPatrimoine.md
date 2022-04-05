@@ -2,7 +2,7 @@
 title: "Gestion du Patrimoine Informatique"
 excerpt: "Gestion d'un patrimoine informatique avec GLPI"
 coverImage: "/assets/image/pexels-karolina-grabowska-5632382.webp"
-date: "2020-03-16T05:35:07.322Z"
+date: "2021-01-06T05:35:07.322Z"
 author:
   name: Keanui CLARK
   picture: "/assets/image/pexels-karolina-grabowska-5632382.webp"
@@ -33,6 +33,8 @@ Toute cette partie à été faite en cours car mon entreprise ne possède que 2 
 GLPI est outil de gestion de parc informatique open source. Il permet de recenser les appareils et les logiciels informatiques de l’entreprise et grâce à des modules complémentaire il peut automatiser tout le parc informatique.
 
 ## Installation
+L'installation suivante fonctionne sur Debian 10 et Ubuntu 20.04 (Les autres distributions non pas été testées).  
+
 ```bash
 # Installation de la base de données MariaDB
 apt-get install mariadb-server
@@ -141,3 +143,95 @@ Pour automatiser la récupération des informations des appareils il faut utilis
 
 ## OCS Inventory
 OCS Inventory va permettre de récupérer les données des différents terminaux (serveurs, ordinateurs, imprimantes, scanneur, téléphone, etc...) de l’entreprise.
+
+### Installation
+```bash
+# Installation des dépendances
+apt-get install apache2-dev libmariadbclient-dev php-soap
+cpan install --force CPAN
+cpan install YAML
+cpan install Mojolicious::Lite Switch Plack::Handler
+# Répondre Yes à la question posée
+
+cpan install XML::Simple Compress::Zlib DBI DBD::mysql \
+Apache::DBI Net::IP Archive::Zip XML::Entities
+
+apt install libxml-simple-perl libperl5.28 libdbi-perl libdbd-mysql-perl libapache-dbi-perl \
+libnet-ip-perl libsoap-lite-perl libarchive-zip-perl make build-essential
+
+apt install php-pclzip make build-essential libdbd-mysql-perl libnet-ip-perl \
+libxml-simple-perl php phpmbstring php-soap php-mysql php-curl php-xml php-zip
+
+cpan install Apache2::SOAP
+
+perl -MCPAN -e 'install Apache2::SOAP'
+
+# Se déplacer dans le répertoire /tmp
+cd /tmp
+
+# Télécharger le plugin OCS Inventory (Il y a surrement une version plus récente)
+wget github.com/OCSInventory-NG/OCSInventory-ocsreports/releases/download/2.7/OCSNG_UNIX_SERVER_2.7.tar.gz
+
+# Décompresser le dossier
+tar xzf OCSNG_UNIX_SERVER_2.7.tar.gz
+
+# Se déplacer dans le dossier précédamment décompressé
+cd OCSNG_UNIX_SERVER_2.7
+
+# Exécuter le script de configuration
+# Si il a une erreur il faut changer les droit d'exécution 
+# du script avec la commande `chmod +x setup.sh`
+# Il y aura des questions pendant l'installation
+# Il faudras répondre en fonction des besoins mais pour notre
+# utilisation nous avons répondu par defaut (touche 'Entrée')
+sh setup.sh
+```
+
+Il faudrat ensuite modifier la configuration de base de OCS Inventory  
+```bash
+# Modifier la configuration de base
+vim /etc/apache2/conf-available/z-ocsinventory-server.conf
+
+## Le contenu du fichier doit correspondre à ceci
+
+# IP Address of the server
+PerlSetEnv OCS_DB_HOST localhost
+# Replace 3306 by port where running MySQL server, generally 3306
+PerlSetEnv OCS_DB_PORT 3306
+# Name of database
+PerlSetEnv OCS_DB_NAME ocsweb
+PerlSetEnv OCS_DB_LOCAL ocsweb
+# User allowed to connect to database
+PerlSetEnv OCS_DB_USER ocsbdd
+# Password for user
+PerlSetVar OCS_DB_PWD ocsbddpass
+
+# Sauvegarder et quiter
+
+vim /etc/apache2/conf-available/zz-ocsinventory-restapi.conf
+<Perl>
+  $ENV{PLACK_ENV} = ‘production’;
+  $ENV{MOJO_HOME} = ‘/usr/local/share/perl/5.24.1’;
+  $ENV{MOJO_MODE} = ‘deployment’;
+  $ENV{OCS_DB_HOST} = ‘localhost‘;
+  $ENV{OCS_DB_PORT} = ‘3306‘;
+  $ENV{OCS_DB_LOCAL} = ‘ocsweb‘;
+  $ENV{OCS_DB_USER} = ‘ocsbdd‘;
+  $ENV{OCS_DB_PWD} = ‘ocsbddpass‘;
+</Perl>
+
+# Modifier les droits
+chown root.www-data /var/lib/ocsinventory-reports
+chmod 755 /var/lib/ocsinventory-reports
+
+# Activer la configuration
+a2enconf z-ocsinventory-server
+a2enconf ocsinventory-reports
+a2enconf zz-ocsinventory-restapi
+
+# Redémarrer Apache
+service apache2 restart
+```
+
+## Conclusion
+Il est donc très simple de mettre en place un outils de gestion de parc informatique avec de simple outils.

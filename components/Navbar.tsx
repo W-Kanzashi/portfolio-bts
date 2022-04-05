@@ -14,19 +14,19 @@ export default function Navbar() {
 
   return (
     <>
-      <aside className="fixed left-0 top-0 z-10 flex min-h-screen max-w-[18%] flex-col items-center justify-around gap-20 rounded-r-xl bg-watusi-500 py-10 px-4 text-2xl shadow-lg shadow-watusi-500">
+      <aside className="fixed left-0 top-0 z-10 flex max-h-screen min-h-screen max-w-[18%] flex-col items-center justify-around gap-10 rounded-r-xl bg-watusi-500 py-10 px-2 text-2xl shadow-lg shadow-watusi-500 2xl:gap-20 2xl:px-4">
         <Link href="/">
-          <a className="text-3xl font-bold text-woody-brown-500 duration-300 ease-in-out hover:scale-105 hover:text-woody-brown-600 hover:drop-shadow-md">
-            <h2 className="">Portfolio CLARK</h2>
+          <a className="text-center text-xl font-bold text-woody-brown-500 duration-300 ease-in-out hover:scale-105 hover:text-woody-brown-600 hover:drop-shadow-md xl:text-3xl">
+            <h2 className="">Portfolio</h2>
           </a>
         </Link>
 
         <section className="hidden md:block">
-          <div className="flex flex-col gap-6 text-left">
+          <div className="flex flex-col gap-2 text-left 2xl:gap-6">
             {NavbarSection.map(({ href, text }) => (
               <Link href={`/#${href}`} key={href}>
-                <a className="font-semibold uppercase text-woody-brown-400 hover:text-woody-brown-500">
-                  <h3 className="flex flex-row items-center gap-3 duration-500 ease-in-out hover:translate-x-2">
+                <a className="text-lg font-semibold uppercase text-woody-brown-400 hover:text-woody-brown-500 xl:text-xl">
+                  <h3 className="flex flex-row items-center gap-1 duration-500 ease-in-out hover:translate-x-2 2xl:gap-3">
                     <FaChevronRight /> {text}
                   </h3>
                 </a>

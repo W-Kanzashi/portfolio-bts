@@ -2,7 +2,7 @@
 title: "Gestion Client"
 excerpt: "Application web de gestion des clients"
 coverImage: "/assets/image/pexels-olya-kobruseva-5417622.webp"
-date: "2020-03-16T05:35:07.322Z"
+date: "2021-01-05T05:35:07.322Z"
 author:
   name: Keanui CLARK
   picture: "/assets/blog/authors/joe.jpeg"
@@ -39,7 +39,7 @@ Le projet doit donc comporter une base de données pour stocker les clients et l
 
 ## Le projet
 Une copie du projet est disponible à l'adresse suivante : [dev.client.ameung.com](https://dev.client.ameung.com)
-Il est aussi possible de télécharger le projet ici [Application Client](https://github.com/W-Kanzashi/Meung-PWA).
+Il est aussi possible de télécharger le projet ici [Application Gestion des Clients](https://github.com/W-Kanzashi/gestion-client).
 
 Pour le d'éveloppement du projet, j'ai utilisé la solution gratuite de MongoDB Atlas.
 ![Page d'accueil](/assets/client/mongodb_free_tier.png)

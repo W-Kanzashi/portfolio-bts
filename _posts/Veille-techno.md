@@ -2,7 +2,7 @@
 title: "Veille Technologique"
 excerpt: "Comment je réalise ma veille technologique"
 coverImage: "/assets/image/pexels-digital-buggu-374559.webp"
-date: "2020-03-01T05:35:07.322Z"
+date: "2021-01-07T05:35:07.322Z"
 author:
   name: Keanui CLARK
   picture: "/assets/blog/authors/joe.jpeg"

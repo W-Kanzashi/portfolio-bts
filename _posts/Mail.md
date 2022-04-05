@@ -2,7 +2,7 @@
 title: "Mail"
 excerpt: "Mise en place d'une boîte mail professionnelle"
 coverImage: "/assets/image/pexels-miguel-a-padrinan-1591062.webp"
-date: "2020-03-30T05:35:07.322Z"
+date: "2021-01-03T05:35:07.322Z"
 author:
   name: Keanui CLARK
   picture: "/assets/blog/authors/joe.jpeg"

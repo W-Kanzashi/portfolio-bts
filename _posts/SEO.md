@@ -2,7 +2,7 @@
 title: "Développer la présence en ligne de l'organisation"
 excerpt: "Développer la présence en ligne de l'organisation par la mise en place d'un site internet"
 coverImage: "/assets/image/pexels-olya-kobruseva-5417622.webp"
-date: "2020-03-28T05:35:07.322Z"
+date: "2021-01-04T05:35:07.322Z"
 author:
   name: Keanui CLARK
   picture: "/assets/blog/authors/joe.jpeg"
