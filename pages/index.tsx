@@ -15,7 +15,6 @@ export default function Index({ allPosts }: Props): JSX.Element {
   const [section, setSection] = useState("Intro");
   const [scrollRef, scrollPercentage] = useScrollPercentage();
 
-  console.log((scrollPercentage as number) / 14);
   function handleSection() {
     switch (Math.floor((scrollPercentage as number) / 14)) {
       case 0:

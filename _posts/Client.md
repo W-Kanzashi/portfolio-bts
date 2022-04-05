@@ -52,3 +52,37 @@ La solution Mongo Atlas permet au développeur d'utiliser une base de donnée Mo
 
 Cette facilité d'utilisation permet de simplifier l'intégration et la sécurité de MongoDB à Next JS.  
 Il est même possible de visualiser des statistiques et d'ajouter des règles de sur les collections.
+
+# L'application
+La page de connexion s'affiche si l'utilisateur n'est pas authentifié sur le site internet.  
+*PS : L'icône exclamation en haut à droite est une alerte d'utilisation de google sso pour le développement (Elle à été mise à jour en production).*
+![Authentication page](/assets/client/Login_Client.png)
+
+Ensuite l'utilsateur est redirigé vers la page d'accueil si l'authentification est faite.
+![Home page](/assets/client/Acceuil.png)
+
+Il est possible d'ajouter un client avec l'ensemble des informations suivantes.  
+Si l'insertion en base de données est réussie, une notification s'affiche avec l'information que le client a été ajouté.
+*Il à été décidé que les seules informations nécessaires pour ajouter un clients sont le nom et le prénom du client.*
+![Add client info](/assets/client/Add_Client_all.png)
+
+La page d'accueil avec des clients renseigné.
+![Home page with client](/assets/client/Homepage.png)
+
+Il est aussi possible de rechercher un client en fonction de son nom, de son prénom et en fonction du nom et prénom.
+![Search client](/assets/client/Search_client.png)
+
+Si on clique sur un client, on sera redirigé vers les informations du client.
+![Client info](/assets/client/Fiche_client.png)
+
+On peut modifier les informations du client.
+![Edit client info](/assets/client/edit_client.png)
+
+Modification de l'entreprise du client.
+![Edit client company](/assets/client/edit_client_1.png)
+
+Vérification que les informations du client ont été modifiées.
+![See the change](/assets/client/client_edited.png)
+
+Affichage des informations des clients dans la base de données.
+![Display the data in the database](/assets/client/database.png)

@@ -62,7 +62,7 @@ Plusieurs choses à vérifier si le site est lent :
 - Convertir les images en format webp ou avif (compression améliorée sans perte de qualité) : certain service fournit une conversion à la volée (conversion coté serveur au moment que l'utilisateur en a besoin)
 - Fournir les images en fonction de la taille de l'appareil. Une image en 4000x4000 pixels n'est pas nécessaire sur un smartphone
 ## Next JS
-Comme évoqué dans la partie "[Les Solutions](/Solutions)" le choix de Next JS est celui qui correspond le mieux au besoin.
+Comme évoqué dans la partie "[Migration](/Migration)" le choix de Next JS est celui qui correspond le mieux au besoin.
 
 ### Pourquoi ?
 Bien qu'il soit possible d'écrire un site internet avec du HTML, du CSS et du Javascript, il est très difficile de le maintenir, car chaque page contient des parties différentes (contenue de la page) et des parties similaires (Bar de navigation, pied de page, etc…).  

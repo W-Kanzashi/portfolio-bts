@@ -4,7 +4,7 @@ export default function HeaderCsp() {
       <main className="prose-body ml-[18%] h-screen px-5 py-5">
         <h1>Les en-têtes HTTP de sécurité</h1>
         <p>
-          Pour sécurisé un site internet il est nécessaire d'utilisé des
+          Pour sécurisé un site internet il est nécessaire d&apos;utilisé des
           en-têtes HTTP de sécurité
         </p>
 

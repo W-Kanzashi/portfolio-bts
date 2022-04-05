@@ -209,6 +209,8 @@ PerlSetVar OCS_DB_PWD ocsbddpass
 # Sauvegarder et quiter
 
 vim /etc/apache2/conf-available/zz-ocsinventory-restapi.conf
+
+# Editier le fichier en fonction de votre configuration
 <Perl>
   $ENV{PLACK_ENV} = ‘production’;
   $ENV{MOJO_HOME} = ‘/usr/local/share/perl/5.24.1’;
@@ -232,6 +234,9 @@ a2enconf zz-ocsinventory-restapi
 # Redémarrer Apache
 service apache2 restart
 ```
+
+# Installation de OCS Inventory sur les clients
+A faire
 
 ## Conclusion
 Il est donc très simple de mettre en place un outils de gestion de parc informatique avec de simple outils.
