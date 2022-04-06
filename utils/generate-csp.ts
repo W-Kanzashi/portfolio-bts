@@ -55,7 +55,7 @@ const generateCSP = ({ scriptHashes }: generateCSPProps = {}) => {
   add("style-src", `'unsafe-inline' portfolio.ameung.com`);
 
   // style-src
-  add("style-src-elem", `'self' portfolio.ameung.com'`);
+  add("style-src-elem", `'self' portfolio.ameung.com`);
 
   // worker-src
   add("worker-src", `'self'`);
