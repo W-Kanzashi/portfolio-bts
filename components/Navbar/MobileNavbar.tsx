@@ -28,7 +28,7 @@ export default function MobileNavbar(props: any): JSX.Element {
 
   return (
     <>
-      <section className="fixed top-0 left-0 z-20 flex min-h-screen min-w-full flex-col items-center justify-center gap-10 bg-watusi-500 text-left">
+      <section className="fixed top-0 left-0 z-50 flex min-h-screen min-w-full flex-col items-center justify-center gap-10 bg-watusi-500 text-left">
         <div className="flex flex-col gap-5">
           <h2 className="text-3xl font-semibold text-woody-brown-600">
             Les projets

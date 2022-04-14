@@ -11,7 +11,7 @@ type Props = {
   slug: string;
 };
 
-const HeroPost = ({ title, coverImage, date, excerpt, slug }: Props) => {
+const HeroPost = ({ title, coverImage, excerpt, slug }: Props) => {
   return (
     <section
       className="flex h-screen w-full snap-center flex-col items-center justify-center text-center"
@@ -27,7 +27,7 @@ const HeroPost = ({ title, coverImage, date, excerpt, slug }: Props) => {
             </Link>
           </h3>
         </div>
-        <div>
+        <div className="md:px-20 2xl:px-32">
           <p className="mb-4 text-xl leading-relaxed text-woody-brown-500">
             {excerpt}
           </p>

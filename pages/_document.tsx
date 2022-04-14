@@ -17,6 +17,7 @@ export default function Document(): JSX.Element {
   return (
     <Html lang="fr">
       <Head>
+        <meta name="robots" content="noindex" />
         <meta
           name="description"
           content="Portfolio de l'étudiant CLARK Keanui pour l'épreuve de BTS SIO Option SLAM"

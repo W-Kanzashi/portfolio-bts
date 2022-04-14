@@ -47,7 +47,7 @@ export default function Index({ allPosts }: Props): JSX.Element {
         <title>CLARK Keanui - Portofolio</title>
       </Head>
       <main
-        className="ml-[18%] h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth duration-1000 no-scrollbar"
+        className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-watusi-600/80 px-3 duration-1000 no-scrollbar xl:ml-[18%] xl:bg-white xl:px-0"
         ref={scrollRef as any}
         onScroll={handleSection}
       >

@@ -45,7 +45,7 @@ export function getDocsBySlug(slug: string, fields: string[] = []): any {
     content: "",
   };
 
-  // // Ensure only the minimal needed data is exposed
+  // Ensure only the minimal needed data is exposed
   fields.forEach(function (field: any) {
     if (field === "slug") {
       items[field] = realSlug;

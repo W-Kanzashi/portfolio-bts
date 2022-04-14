@@ -1,6 +1,6 @@
 ---
 title: "Migration de service"
-excerpt: "L'utilisation de service gratuit et opensource"
+excerpt: "Cette section présentes les différentes solutions utilisées dans les différents projets mis en place en entreprise. Il n'est pas nécessaire de la lire car vous serez redirigé vers les informations nécessaires en cas de besoin."
 coverImage: "/assets/image/hunter-harritt-Ype9sdOPdYc-unsplash.webp"
 date: "2021-01-01T05:35:07.322Z"
 author:

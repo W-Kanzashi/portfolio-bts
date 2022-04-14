@@ -34,11 +34,11 @@ Le projet doit donc comporter une base de données pour stocker les clients et l
 
 ## Les choix
 - Le Framework choisi : Next JS avec typecript. Ce qui permet la création de page dynamique, de création d’api simplifié, l’utilisation du Framework React qui est conçu "safe by default" (sûr par défaut) ce qui permet de supprimer toutes les attaques de type XSS
-- La base de données : MongoDB  Base de données non relationnelle au format JSON ce qui permet de facilité les échanges d’informations entre le serveur de base de données et l’application. Cette base de données est hébergée chez MongoDB directement car ils proposent un service ne coutant que 0.30 euros/million de requêtes (probablement le service le moins cher), ce qui fait 2,700 requêtes par jours pendant 365 jours
+- La base de données : MongoDB est une base de données non relationnelle au format JSON ce qui permet de facilité les échanges d’informations entre le serveur de base de données et l’application. Cette base de données est hébergée chez MongoDB directement car ils proposent un service ne coutant que 0.30 euros/million de requêtes (probablement le service le moins cher), ce qui fait 2,700 requêtes par jours pendant 365 jours
 - Création d’une API REST privée pour faire les requêtes en base de données à partir de l’application web
 
 ## Le projet
-Une copie du projet est disponible à l'adresse suivante : [dev.client.ameung.com](https://dev.client.ameung.com)
+Une copie du projet est disponible à l'adresse suivante : [client.ameung.com](https://client.ameung.com)
 Il est aussi possible de télécharger le projet ici [Application Gestion des Clients](https://github.com/W-Kanzashi/gestion-client).
 
 Pour le d'éveloppement du projet, j'ai utilisé la solution gratuite de MongoDB Atlas.
@@ -58,8 +58,11 @@ La page de connexion s'affiche si l'utilisateur n'est pas authentifié sur le si
 *PS : L'icône exclamation en haut à droite est une alerte d'utilisation de google sso pour le développement (Elle à été mise à jour en production).*
 ![Authentication page](/assets/client/Login_Client.png)
 
-Ensuite l'utilsateur est redirigé vers la page d'accueil si l'authentification est faite.
-![Home page](/assets/client/Acceuil.png)
+Utilisateur : test@dev.ameung.com  
+Mot de passe : 3OaFSXx41LNmGztEe@h=
+
+Ensuite l'utilisateur est redirigé vers la page d'accueil si l'authentification est faite.
+![Home page](/assets/client/Accueil.png)
 
 Il est possible d'ajouter un client avec l'ensemble des informations suivantes.  
 Si l'insertion en base de données est réussie, une notification s'affiche avec l'information que le client a été ajouté.
