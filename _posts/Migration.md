@@ -1,6 +1,6 @@
 ---
 title: "Migration de service"
-excerpt: "Cette section présentes les différentes solutions utilisées dans les différents projets mis en place en entreprise. Il n'est pas nécessaire de la lire car vous serez redirigé vers les informations nécessaires en cas de besoin."
+excerpt: "Cette section présentes les différentes solutions utilisées dans les différents projets mis en place en entreprise."
 coverImage: "/assets/image/hunter-harritt-Ype9sdOPdYc-unsplash.webp"
 date: "2021-01-01T05:35:07.322Z"
 author:
@@ -39,7 +39,7 @@ Les coûts liés au serveur étant réduit à zéro le reste des dépenses ne re
 
 Bien que cette solution soit extrêmement bénéfique pour l’entreprise il en est moins pour la personne en charge de mettre et de maintenir le système. Des notions de réseaux et de développement est nécessaire.
 
-# Les Solutions évoqué dans le portfolio
+# Les Outils évoqué dans le portfolio
 
 ## Next JS
 Next JS est un Framework qui permet de créer et mettre en place des sites et applications web modernes et performants.  

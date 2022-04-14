@@ -20,7 +20,7 @@ export default function LinkNavbar(props: Props) {
         <a onClick={toggleNavbar}>
           <h3 className="flex flex-row items-center gap-3 text-lg font-bold text-woody-brown-500 xl:text-lg">
             {props.labelIcon}
-            {props.link}
+            {props.slug}
           </h3>
         </a>
       </Link>

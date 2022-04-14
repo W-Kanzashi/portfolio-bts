@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { useState } from "react";
-import { FaLinux } from "react-icons/fa";
-import { FaChevronRight, FaGithub } from "react-icons/fa";
+import { FaLinux, FaChevronRight, FaGithub } from "react-icons/fa";
+import { BiNavigation } from "react-icons/bi";
 
 import MobileNavbar from "@components/Navbar/MobileNavbar";
-
 import NavbarSection from "const/Links";
 
 export default function Navbar() {
@@ -14,15 +13,15 @@ export default function Navbar() {
 
   return (
     <>
-      <aside className="fixed left-0 top-0 z-10 hidden max-h-screen min-h-screen max-w-[18%] flex-col items-center justify-around gap-10 rounded-r-xl bg-watusi-500 py-10 px-2 text-2xl shadow-lg shadow-watusi-500 xl:flex 2xl:gap-20 2xl:px-4">
+      <aside className="fixed left-0 top-0 z-10 hidden max-h-screen min-h-screen max-w-[25%] flex-col items-center justify-around gap-20 rounded-r-xl bg-watusi-500 py-10 px-4 text-2xl shadow-lg shadow-watusi-500 xl:flex">
         <Link href="/">
           <a className="text-center text-xl font-bold text-woody-brown-500 duration-300 ease-in-out hover:scale-105 hover:text-woody-brown-600 hover:drop-shadow-md xl:text-3xl">
             <h2 className="">Portfolio</h2>
           </a>
         </Link>
 
-        <section className="hidden md:block">
-          <div className="flex flex-col gap-2 text-left 2xl:gap-6">
+        <section>
+          <div className="flex flex-col gap-6 text-left">
             {NavbarSection.map(({ href, text }) => (
               <Link href={`/#${href}`} key={href}>
                 <a className="text-lg font-semibold uppercase text-woody-brown-400 hover:text-woody-brown-500 xl:text-xl">
@@ -62,8 +61,13 @@ export default function Navbar() {
         </button>
       </aside>
       {/* Navbar responsive */}
-      <nav className="fixed bottom-0 left-0 z-10 flex h-10 w-full items-center justify-center xl:hidden">
-        <button onClick={toggleNavbar}>Navigation</button>
+      <nav className="fixed bottom-3 left-0 z-10 flex h-10 w-full items-center justify-center xl:hidden">
+        <button
+          className="flex flex-row items-center justify-center gap-3 text-2xl duration-300 ease-in-out hover:text-woody-brown-500 hover:drop-shadow-xl"
+          onClick={toggleNavbar}
+        >
+          <BiNavigation /> Navigation
+        </button>
       </nav>
       {navbarOpen && (
         <MobileNavbar setNavbarOpen={toggleNavbar} navbarOpen={navbarOpen} />
