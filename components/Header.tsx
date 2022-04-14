@@ -16,6 +16,10 @@ export default function Header(props: any): JSX.Element {
           Ci-dessous vous trouverez la présentation des différents projets
           réalisés en entreprise et en cours.
         </p>
+        <p>
+          La version sombre du site internet n&apos;a pas été réalisé. Veuilliez
+          donc utiliser le mode clair pour une meilleure expérience.
+        </p>
       </div>
     </section>
   );

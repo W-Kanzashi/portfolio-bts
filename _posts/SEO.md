@@ -13,7 +13,7 @@ ogImage:
 ---
 
 # Mise en place d'un site internet
-Le principal moteur de recherche utilisé est Google, il faut donc connaître la manière dont le moteur de recherche classe les sites internets.  
+Le principal moteur de recherche utilisé est Google, il faut donc connaître la manière dont le moteur de recherche classe les sites internet.  
 Google de fournit pas de règles à suivre mais plutôt des recommandations et depuis mai 2021 Google a publié une mise à jour qui présente sa nouvelle méthode de classement des pages.
 Cette nouvelle méthode est basée sur l'expérience utilisateur (UX : perception et ressentiment de l'utilisateur qui utilise le service).
 ![Classement des pages par Google](/assets/siteInternet/eff8c469fa030ffae2dba57ad165fbdaa5933f10-1080x1920.png)   
@@ -99,7 +99,7 @@ Tailwind css se charge donc de toute cette partie à l'aide de Postcss et d'Auto
 Dernier avantage d'utiliser Tailwind css au lieu de Bootstrap est que le code css en ligne n'est que celui dont on a besoin, ce qui permet de réduire la taille des fichiers téléchargé par les visiteurs. Ceci permet aussi d'augmenter le score donné par PageSpeed (Google).
 
 ## Sécurité
-Bien que React soit bien isolé des failles de sécurité le site internet doit maintenant être sécurisé avec l’utilisation d’entête de sécurité et du CSP (Content Security Policy). Ceci est développer dans une [section a part](/Header-csp) pour plus de clarté.
+Bien que React soit bien protégé des failles de sécurité le site internet doit maintenant être sécurisé avec l’utilisation d’entête de sécurité et du CSP (Content Security Policy). Ceci est développé dans une [section a part](/Header-csp) pour plus de clarté.
 
 ### Finalisation du site
 Finaliser le site internet en vérifiant que l'optimisation, la sécurité du site et l'expérience utilisateur est bien réalisé :

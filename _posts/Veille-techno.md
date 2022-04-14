@@ -61,7 +61,7 @@ Pour pouvoir convertir du markdown en HTML, il y a deux solutions :
 - Utiliser un convertisseur ou l'on écrit du Markdown et il nous retourne du HTML
 - Utiliser un parser qui va interpréter le markdown et générer du HTML
 
-Cette deuxième solution est utilisé dans ce projet et dans l'écriture des différentes documentations.
+Cette deuxième solution est utilisée dans ce projet et dans l'écriture des différentes documentations.
 
 #### Pourquoi ?
-La principale raison était d'écrire une API qui permet de générer du HTML à partir d'un fichier écrit avec du Markdown. Cella ma permis d'apprendre à écrire une API pour la réalisation de cette tâche.
+La principale raison était d'écrire une API qui permet de générer du HTML à partir d'un fichier écrit avec du Markdown. Cela m'a permis d'apprendre à écrire une API pour la réalisation de cette tâche.
