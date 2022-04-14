@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <>
-      <aside className="fixed left-0 top-0 z-10 hidden max-h-screen min-h-screen max-w-[25%] flex-col items-center justify-around gap-20 rounded-r-xl bg-watusi-500 py-10 px-4 text-2xl shadow-lg shadow-watusi-500 xl:flex">
+      <aside className="fixed left-0 top-0 z-10 hidden max-h-screen min-h-screen max-w-[25%] flex-col items-center justify-around gap-20 rounded-r-xl bg-watusi-500 py-10 px-4 text-2xl shadow-lg shadow-watusi-500 xl:flex xl:max-w-[18%]">
         <Link href="/">
           <a className="text-center text-xl font-bold text-woody-brown-500 duration-300 ease-in-out hover:scale-105 hover:text-woody-brown-600 hover:drop-shadow-md xl:text-3xl">
             <h2 className="">Portfolio</h2>
@@ -61,7 +61,7 @@ export default function Navbar() {
         </button>
       </aside>
       {/* Navbar responsive */}
-      <nav className="fixed bottom-3 left-0 z-10 flex h-10 w-full items-center justify-center xl:hidden">
+      <nav className="fixed bottom-0 left-0 z-10 flex h-12 w-full items-center justify-center bg-watusi-500 xl:hidden">
         <button
           className="flex flex-row items-center justify-center gap-3 text-2xl duration-300 ease-in-out hover:text-woody-brown-500 hover:drop-shadow-xl"
           onClick={toggleNavbar}

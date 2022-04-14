@@ -10,7 +10,7 @@ export default function PageSelector({
   }
   return (
     <>
-      <section className="absolute top-4 right-1/2 flex translate-x-1/2 flex-row gap-1 xl:right-2 xl:top-1/2 xl:-translate-y-1/2 xl:translate-x-0 xl:flex-col">
+      <section className="absolute top-4 right-1/2 hidden translate-x-1/2 flex-row gap-1 md:flex xl:right-2 xl:top-1/2 xl:-translate-y-1/2 xl:translate-x-0 xl:flex-col">
         {NavbarSection.map(({ href }: any) => (
           <Link href={`#${href}`} key={href} passHref>
             <button

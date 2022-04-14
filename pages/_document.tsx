@@ -25,10 +25,6 @@ export default function Document(): JSX.Element {
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"></link>
         <meta name="theme-color" content="#442C2E" />
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content={generateCSP({ scriptHashes })}
-        />
       </Head>
       <body>
         <Main />

@@ -1,7 +1,7 @@
 export default function Header(props: any): JSX.Element {
   return (
     <section
-      className="flex h-screen w-full snap-center flex-col items-center justify-center"
+      className="flex h-screen w-full flex-col items-center justify-center px-3 md:snap-center md:px-0"
       id="Intro"
     >
       <div className="prose prose-xl mx-auto flex flex-col">

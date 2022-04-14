@@ -33,7 +33,7 @@ const HeroPost = ({ title, coverImage, excerpt, slug }: Props) => {
           </p>
         </div>
       </div>
-      <div className="mb-8 h-96 w-96 md:mb-16">
+      <div className="mb-8 h-96 w-full md:mb-16 md:w-96">
         <CoverImage title={title} src={coverImage} slug={slug} />
       </div>
     </section>

@@ -27,8 +27,8 @@ const Links = [
     labelIcon: <GrCloudComputer />,
   },
   {
-    link: "Veille Technologique",
-    slug: "Veille-techno",
+    link: "Veille-techno",
+    slug: "Veille Technologique",
     labelIcon: <FaBookOpen />,
   },
 ];
@@ -76,7 +76,7 @@ export default function MobileNavbar(props: any): JSX.Element {
             <span className="text-lg">Github Repository</span>
           </a>
         </section>
-        <nav className="fixed bottom-3 left-0 z-10 flex h-10 w-full items-center justify-center xl:hidden">
+        <nav className="fixed bottom-0 left-0 z-10 flex h-10 w-full items-center justify-center xl:hidden">
           <button
             className="flex flex-row items-center justify-center gap-3 text-2xl duration-300 ease-in-out hover:text-woody-brown-500 hover:drop-shadow-xl"
             onClick={toggleNavbar}
