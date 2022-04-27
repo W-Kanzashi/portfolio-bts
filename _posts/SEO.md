@@ -5,11 +5,11 @@ coverImage: "/assets/image/pexels-olya-kobruseva-5417622.webp"
 date: "2021-01-04T05:35:07.322Z"
 author:
   name: Keanui CLARK
-  picture: "/assets/blog/authors/joe.jpeg"
+  picture: ""
 ogImage:
   url: "/assets/image/pexels-olya-kobruseva-5417622.webp"
-  credit: "Photo by Olya Kobruseva from Pexels"
-  link: "https://www.pexels.com/photo/pink-and-gold-stationery-in-composition-5417622/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
+  credit: "Photo by Miguel Á. Padriñán from Pexels"
+  link: "https://www.pexels.com/photo/web-text-1591060/"
 ---
 
 # Mise en place d'un site internet

@@ -1,15 +1,15 @@
 ---
 title: "Gestion du Patrimoine Informatique"
 excerpt: "Gestion d'un patrimoine informatique avec GLPI"
-coverImage: "/assets/image/pexels-karolina-grabowska-5632382.webp"
+coverImage: "/assets/image/pexels-pixabay-267507.webp"
 date: "2021-01-06T05:35:07.322Z"
 author:
   name: Keanui CLARK
-  picture: "/assets/image/pexels-karolina-grabowska-5632382.webp"
+  picture: ""
 ogImage:
-  url: "/assets/blog/preview/cover.jpg"
-  credit: "Photo by Karolina Grabowska from Pexels"
-  link: "https://www.pexels.com/photo/shopping-cart-on-a-macbook-5632382/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
+  url: "/assets/image/pexels-pixabay-267507.webp"
+  credit: "Photo by Pixabay"
+  link: "https://www.pexels.com/photo/gray-wooden-computer-cubicles-inside-room-267507/"
 ---
 
 # Gestion du Patrimoine Informatique
@@ -235,8 +235,42 @@ a2enconf zz-ocsinventory-restapi
 service apache2 restart
 ```
 
-# Installation de OCS Inventory sur les clients
-A faire
+# Installation de OCS Inventory sur les clients 
+Lancer l'exécutable de OCS Inventory sur les clients windows
+
+![](/assets/gestionPatrimoine/setup_2.png) 
+
+Lire et accepter les termes du contrat
+
+![](/assets/gestionPatrimoine/setup_3.png)
+
+Choisir les composants à installer
+
+![](/assets/gestionPatrimoine/setup_4.png) 
+
+Ici il faut saisir l'adresse ip du serveur GLPI et décocher `Validate certificates`
+
+![](/assets/gestionPatrimoine/setup_5.png)
+
+Cliquer sur `Next`
+
+![](/assets/gestionPatrimoine/setup_6.png) 
+
+Cliquer sur `Next`
+
+![](/assets/gestionPatrimoine/setup_7.png) 
+
+Cliquer sur `Next`
+
+![](/assets/gestionPatrimoine/setup_8.png) 
+
+Cliquer sur `Next`
+
+![](/assets/gestionPatrimoine/setup_9.png) 
+
+Cliquer sur `Finish`
+
+![](/assets/gestionPatrimoine/setup_10.png)
 
 ## Conclusion
 Il est donc très simple de mettre en place un outils de gestion de parc informatique avec de simple outils.
