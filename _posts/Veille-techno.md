@@ -94,7 +94,7 @@ qm create 10000 --name rke-template --memory 8192 --sockets 2 --cores 4 --net0 v
 # --net0 virtio : Choix du type de carte réseau virtuel (virtio est l'émulateur de carte réseau le plus utilisé)
 # --bridge=vmbr0 : Choix de la carte réseau de proxmox (proxmox créer par défaut un pont virtuel pour chaques cartes réseaux)
 
-qm set 900 --agent enabled=1 # Activation de l'agent QEMU (Activer les commandes clavier dans le navigateur : copier/coller, crtr+alt+sup, etc...)
+qm set 10000 --agent enabled=1 # Activation de l'agent QEMU (Activer les commandes clavier dans le navigateur : copier/coller, crtr+alt+sup, etc...)
 
 # Téléchargement d'un disque cloudinit qui va permettre de lancer une machine virtuelle sans avoir à l'installer (on peut aussi modifier la configuration du cloudinit). La dernière version de ubuntu est focal
 wget https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img
@@ -109,8 +109,8 @@ qm set 10000 --boot c --bootdisk scsi0
 # On monte le disque cloudinit
 qm set 10000 --ide2 local-lvm:cloudinit
 
-# Importer une clé ssh publique pour pouvoir se connecter à la machine
-qm set 10000 --sshkey id_ed25519.pub
+# Importer une clé (ou une liste de clé) ssh publique pour pouvoir se connecter aux machines
+qm set 10000 --sshkey id_ed25519.txt # Pas obligatoire
 
 # Convertir la machine virtuelle en modèle (template)
 qm template 10000
@@ -122,22 +122,24 @@ Pour le cluster j'ai utilisé 4 machines, un serveur et trois `nodes` (machines 
 ```bash
 # Dans Proxmox on peut automatiser la création des machines virtuelles (on peut mettre les commandes suivantes dans un script)
 # On clone le template
-for i in {200..203}; do qm clone 10000 $i --full --name rke$i; done
+## Remplacer 200..204 par le nombre de machines à créer
+## 200..204 va créer les machines avec un id 200, 201, 202 et 203
+for i in {200..204}; do qm clone 10000 $i --full --name rke$i; done
 
 # On attribut une adresse ip au template
-for i in {200..203}; do qm set $i --ipconfig0 ip=10.255.255.$i/8,gw=10.0.0.2; done
+for i in {200..204}; do qm set $i --ipconfig0 ip=10.255.255.$i/8,gw=10.0.0.2; done
 
 # On agrandit le disque dur des machines virtuelles (mettre au minimum 10 Go)
-for i in {200..203}; do qm resize $i scsi0 100G; done
+for i in {200..204}; do qm resize $i scsi0 100G; done
 
 # Faire démarrer les machines virtuelles au démarrage du serveur (pas forcément nécessaire)
-for i in {200..203}; do qm set $i --onboot=1; done
+for i in {200..204}; do qm set $i --onboot=1; done
 
 # On démarre le cluster
-for i in {200..203}; do qm start $i; done
+for i in {200..204}; do qm start $i; done
 
 # Redémarrer le cluster pour s'assurer que le kernel des machines sont à jour
-for i in {200..203}; do qm reboot $i; done # Remplacer reboot par reset si reboot ne fonctionne pas
+for i in {200..204}; do qm reboot $i; done # Remplacer reboot par reset si reboot ne fonctionne pas
 ```
 
 Il faut maintenant se connecter à la machine virtuelle pour installer et configurer Kubernetes avec RKE.  
