@@ -7,12 +7,38 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        loading: {
+          "0%": { transform: "scale(0)" },
+          "50%": { transform: "scale(0.6)" },
+          "100%": { transform: "scale(1)" },
+        },
+      },
+      animation: {
+        loading: "loading 2s ease infinite",
+      },
+      delay: {
+        100: "100ms",
+        200: "200ms",
+        300: "300ms",
+        400: "400ms",
+        500: "500ms",
+        600: "600ms",
+        700: "700ms",
+        800: "800ms",
+        900: "900ms",
+        1000: "1000ms",
+        1500: "1500ms",
+        2000: "2000ms",
+      },
+    },
     colors: {
       transparent: "transparent",
       gray: colors.gray,
       teal: colors.teal,
       white: colors.white,
+      slate: colors.slate,
       watusi: {
         DEFAULT: "#FEDBD0",
         50: "#FFFFFF",
@@ -43,7 +69,7 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
-    plugin(function ({ addUtilities }) {
+    plugin(function ({ addUtilities, matchUtilities, theme }) {
       addUtilities({
         ".no-scrollbar::-webkit-scrollbar": {
           display: "none",
@@ -53,6 +79,14 @@ module.exports = {
           "scrollbar-width": "none",
         },
       });
+      matchUtilities(
+        {
+          "animation-delay": (value) => ({
+            "animation-delay": value,
+          }),
+        },
+        { values: theme("delay") }
+      );
     }),
   ],
 };

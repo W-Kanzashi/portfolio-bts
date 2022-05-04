@@ -21,4 +21,35 @@ body {
   .prose-body {
     @apply prose prose-sm prose-slate duration-300 ease-in-out prose-a:text-teal-600 prose-a:no-underline hover:prose-a:text-teal-700 md:prose-base xl:prose-xl;
   }
+
+  .loading-cube {
+    @apply block h-10 w-10 animate-loading bg-white;
+  }
+
+  .loading-cube:nth-child(1),
+  .loading-cube:nth-child(5),
+  .loading-cube:nth-child(9) {
+    @apply animation-delay-800;
+  }
+
+  .loading-cube:nth-child(2) {
+    @apply animation-delay-900;
+  }
+
+  .loading-cube:nth-child(3) {
+    @apply animation-delay-1000;
+  }
+
+  .loading-cube:nth-child(4),
+  .loading-cube:nth-child(8) {
+    @apply animation-delay-700;
+  }
+
+  .loading-cube:nth-child(6) {
+    @apply animation-delay-900;
+  }
+
+  .loading-cube:nth-child(7) {
+    @apply animation-delay-600;
+  }
 }

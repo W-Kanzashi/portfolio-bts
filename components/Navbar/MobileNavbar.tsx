@@ -1,8 +1,7 @@
-import { FaBookOpen, FaGithub, FaHome, FaPlane } from "react-icons/fa";
-import { MdMail, MdPerson } from "react-icons/md";
-import { BiNavigation, BiNetworkChart } from "react-icons/bi";
-import { GrCloudComputer } from "react-icons/gr";
+import { FaGithub } from "react-icons/fa";
+import { BiNavigation } from "react-icons/bi";
 
+import LinksSection from "@components/Navbar/LinksSections";
 import LinkNavbar from "@components/Navbar/LinkNavbar";
 
 interface Links {
@@ -11,31 +10,9 @@ interface Links {
   labelIcon: any;
 }
 
-const Links = [
-  { link: "Intro", slug: "Introduction", labelIcon: <FaHome /> },
-  { link: "Migration", slug: "Migration des services", labelIcon: <FaPlane /> },
-  { link: "Mail", slug: "Mail", labelIcon: <MdMail /> },
-  {
-    link: "SEO",
-    slug: "Développer la présence en ligne",
-    labelIcon: <BiNetworkChart />,
-  },
-  { link: "Gestion Client", slug: "Client", labelIcon: <MdPerson /> },
-  {
-    link: "GestionPatrimoine",
-    slug: "Gestion du patrimoine",
-    labelIcon: <GrCloudComputer />,
-  },
-  {
-    link: "Veille-techno",
-    slug: "Veille Technologique",
-    labelIcon: <FaBookOpen />,
-  },
-];
-
 export default function MobileNavbar(props: any): JSX.Element {
-  function toggleNavbar() {
-    props.setNavbarOpen(!props.navbarOpen);
+  function toggleMobileNavbar() {
+    props.setMobileNavbarOpen(!props.navbarOpen);
   }
 
   return (
@@ -45,15 +22,15 @@ export default function MobileNavbar(props: any): JSX.Element {
           <h2 className="text-3xl font-semibold text-woody-brown-600">
             Les projets
           </h2>
-          {Links.map(({ link, slug, labelIcon }: Links) => (
+          {LinksSection.map(({ link, slug, labelIcon }: Links) => (
             <LinkNavbar
               key={slug}
               link={link}
               slug={slug}
               labelIcon={labelIcon}
-              setNavbarOpen={toggleNavbar}
+              setNavbarOpen={toggleMobileNavbar}
               navbarOpen={props.navbarOpen}
-              toggleNavbar={toggleNavbar}
+              toggleNavbar={toggleMobileNavbar}
             />
           ))}
         </div>
@@ -79,7 +56,7 @@ export default function MobileNavbar(props: any): JSX.Element {
         <nav className="fixed bottom-0 left-0 z-10 flex h-10 w-full items-center justify-center xl:hidden">
           <button
             className="flex flex-row items-center justify-center gap-3 text-2xl duration-300 ease-in-out hover:text-woody-brown-500 hover:drop-shadow-xl"
-            onClick={toggleNavbar}
+            onClick={toggleMobileNavbar}
           >
             <BiNavigation /> Navigation
           </button>

@@ -11,13 +11,14 @@ interface Props {
 }
 
 export default function LinkNavbar(props: Props) {
-  function toggleNavbar() {
+  function handleNavbar() {
     props.setNavbarOpen(!props.navbarOpen);
   }
+
   return (
     <button className={props.className} key={props.slug}>
       <Link href={`#${props.link}`}>
-        <a onClick={toggleNavbar}>
+        <a onClick={handleNavbar}>
           <h3 className="flex flex-row items-center gap-3 text-lg font-bold text-woody-brown-500 xl:text-lg">
             {props.labelIcon}
             {props.slug}
