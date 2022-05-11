@@ -1,4 +1,4 @@
-import LinksSection from "@components/Navbar/LinksSections";
+import { Work, Courses, Personal } from "@components/Navbar/LinksSections";
 import LinkNavbar from "@components/Navbar/LinkNavbar";
 
 interface Links {
@@ -7,17 +7,32 @@ interface Links {
   labelIcon: any;
 }
 
-export default function WorkSection(props: any): JSX.Element {
+export default function Section(props: any): JSX.Element {
+  let LinksSection: any;
+
   function toggleNavbar() {
     // toggleNavbar = (section: string, state = true)
     props.setNavbarOpen(false, "");
   }
 
-  console.log(props.navbarOpen);
+  switch (props.section) {
+    case "Entreprise":
+      LinksSection = Work;
+      break;
+    case "Cours":
+      LinksSection = Courses;
+      break;
+    case "Personel":
+      LinksSection = Personal;
+      break;
+    default:
+      break;
+  }
+
   return (
     <>
       <aside
-        className="fixed left-[25%] top-0 z-10 hidden max-h-screen min-h-screen max-w-[25%] flex-col items-center justify-around gap-20 rounded-r-xl border-2 border-woody-brown-500 bg-watusi-500 py-10 px-4 text-2xl shadow-lg shadow-watusi-500 xl:left-[18%] xl:flex"
+        className="fixed left-[24%] top-0 z-10 hidden max-h-screen min-h-screen min-w-[20rem] max-w-[25%] flex-col items-center justify-around gap-20 rounded-r-xl border-2 border-woody-brown-500 bg-watusi-500 py-10 px-4 text-2xl shadow-lg shadow-watusi-500 xl:left-[17%] xl:flex"
         onMouseLeave={toggleNavbar}
       >
         <section>

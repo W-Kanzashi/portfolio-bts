@@ -1,28 +1,52 @@
-import { FaBookOpen, FaHome, FaPlane } from "react-icons/fa";
-import { MdMail, MdPerson } from "react-icons/md";
+import { FaBookOpen, FaPlane } from "react-icons/fa";
+import { MdMail, MdPerson, MdBackup } from "react-icons/md";
 import { BiNetworkChart } from "react-icons/bi";
 import { GrCloudComputer } from "react-icons/gr";
+import { AiOutlineProject } from "react-icons/ai";
+import { SiProxmox } from "react-icons/si";
 
-const LinksSection = [
-  { link: "Intro", slug: "Introduction", labelIcon: <FaHome /> },
-  { link: "Migration", slug: "Migration des services", labelIcon: <FaPlane /> },
-  { link: "Mail", slug: "Mail", labelIcon: <MdMail /> },
+export const Courses = [
   {
-    link: "SEO",
-    slug: "Développer la présence en ligne",
-    labelIcon: <BiNetworkChart />,
+    link: "Proxmox",
+    slug: "Proxmox",
+    labelIcon: <SiProxmox />,
   },
-  { link: "Gestion Client", slug: "Client", labelIcon: <MdPerson /> },
+  {
+    link: "GestionSauvegardes",
+    slug: "Gestion des Sauvegardes",
+    labelIcon: <MdBackup />,
+  },
+  {
+    link: "GestionProjet",
+    slug: "Gestion de Projet",
+    labelIcon: <AiOutlineProject />,
+  },
   {
     link: "GestionPatrimoine",
     slug: "Gestion du patrimoine",
     labelIcon: <GrCloudComputer />,
   },
+];
+
+export const Work = [
+  { link: "Migration", slug: "Migration des services", labelIcon: <FaPlane /> },
+  { link: "Mail", slug: "Mail", labelIcon: <MdMail /> },
+  {
+    link: "SEO",
+    slug: "Présence en ligne",
+    labelIcon: <BiNetworkChart />,
+  },
+  {
+    link: "Client",
+    slug: "Gestion des Clients",
+    labelIcon: <MdPerson />,
+  },
+];
+
+export const Personal = [
   {
     link: "Veille-techno",
     slug: "Veille Technologique",
     labelIcon: <FaBookOpen />,
   },
 ];
-
-export default LinksSection;

@@ -25,7 +25,7 @@ export default function Navbar() {
    * @param section - The section that need to be display
    * @returns `void`
    */
-  const toggleNavbar = (section: string, state? = true) =>
+  const toggleNavbar = (section: string, state = true) =>
     setNavbarOpen({ state: state, section: section });
 
   return (

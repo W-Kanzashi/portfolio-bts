@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { BiNavigation } from "react-icons/bi";
 
-import LinksSection from "@components/Navbar/LinksSections";
+import { Work, Courses, Personal } from "@components/Navbar/LinksSections";
 import LinkNavbar from "@components/Navbar/LinkNavbar";
 
 interface Links {
@@ -10,28 +11,54 @@ interface Links {
   labelIcon: any;
 }
 
+const homeSection = [
+  { section: "Entreprise" },
+  { section: "Cours" },
+  { section: "Personel" },
+];
+
 export default function MobileNavbar(props: any): JSX.Element {
+  const [openSection, setOpenSection] = useState("");
   function toggleMobileNavbar() {
     props.setMobileNavbarOpen(!props.navbarOpen);
   }
 
+  function displaySection(section: any) {
+    {
+      section.map(({ link, slug, labelIcon }: Links) => (
+        <LinkNavbar
+          key={slug}
+          link={link}
+          slug={slug}
+          labelIcon={labelIcon}
+          setNavbarOpen={toggleMobileNavbar}
+          navbarOpen={props.navbarOpen}
+          toggleNavbar={toggleMobileNavbar}
+        />
+      ));
+    }
+  }
+
   return (
     <>
-      <section className="fixed top-0 left-0 z-50 flex min-h-screen min-w-full flex-col items-center justify-around bg-watusi-500 text-left">
+      <section className="fixed top-0 left-0 z-50 flex min-h-screen min-w-full flex-col items-center justify-center gap-8 bg-watusi-500 text-left">
+        <h2 className="text-3xl font-semibold text-woody-brown-600">
+          Les projets
+        </h2>
         <div className="flex flex-col gap-5">
-          <h2 className="text-3xl font-semibold text-woody-brown-600">
-            Les projets
-          </h2>
-          {LinksSection.map(({ link, slug, labelIcon }: Links) => (
-            <LinkNavbar
-              key={slug}
-              link={link}
-              slug={slug}
-              labelIcon={labelIcon}
-              setNavbarOpen={toggleMobileNavbar}
-              navbarOpen={props.navbarOpen}
-              toggleNavbar={toggleMobileNavbar}
-            />
+          {homeSection.map(({ section }: any) => (
+            <button
+              className={`${
+                openSection === section ? "bg-woody-brown-600" : ""
+              } py-2 px-4 text-xl font-bold text-woody-brown-500 hover:border-woody-brown-600 hover:text-woody-brown-600`}
+              key={section}
+              onClick={() => {
+                setOpenSection(section);
+                displaySection(section);
+              }}
+            >
+              {section}
+            </button>
           ))}
         </div>
 
